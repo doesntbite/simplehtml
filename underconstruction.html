@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Construction</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/846/846398.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #fff;
+            overflow: hidden;
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+        .maintenance-container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 90%;
+            margin: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .lottie-animation {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 20px;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        .social-links a:hover {
+            transform: translateY(-5px);
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .countdown {
+            font-size: 1.2rem;
+            margin: 20px 0;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8rem; }
+            p { font-size: 1rem; }
+            .maintenance-container { padding: 30px 20px; }
+            .lottie-animation { width: 150px; height: 150px; }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body>
+    <div class="maintenance-container">
+        <div class="lottie-animation">
+            <lottie-player
+                src="https://assets5.lottiefiles.com/packages/lf20_vybwn7df.json"
+                background="transparent"
+                speed="1"
+                loop
+                autoplay>
+            </lottie-player>
+        </div>
+        <h1>🚧 Sedang Dalam Pembangunan 🚧</h1>
+        <p>Maaf atas ketidaknyamanan ini. Situs web kami sedang mengalami peningkatan untuk memberikan pengalaman yang lebih baik kepada Anda.</p>
+        <div class="countdown" id="countdown">
+            Perkiraan waktu penyelesaian: <span id="time">2 hari 12 jam</span>
+        </div>
+        <p>Silakan kunjungi kami lagi nanti atau hubungi kami melalui media sosial:</p>
+        <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+    </div>
+
+    <script>
+        // Simple countdown timer example
+        function updateCountdown() {
+            const targetDate = new Date();
+            targetDate.setDate(targetDate.getDate() + 2); // 2 days from now
+            targetDate.setHours(targetDate.getHours() + 12); // Plus 12 hours
+            
+            const now = new Date();
+            const diff = targetDate - now;
+            
+            if (diff <= 0) {
+                document.getElementById('time').textContent = "Segera!";
+                return;
+            }
+            
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            
+            document.getElementById('time').textContent = `${days} hari ${hours} jam`;
+        }
+        
+        updateCountdown();
+        setInterval(updateCountdown, 3600000); // Update every hour
+    </script>
+</body>
+</html>
