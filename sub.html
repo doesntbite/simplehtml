@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INCONIGTO-MODE || Subscription</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://raw.githubusercontent.com/AFRcloud/BG/main/icons8-film-noir-80.png"/>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Common CSS styles shared across all pages */
+:root {
+  /* Color variables */
+  --primary: #6a11cb;
+  --primary-dark: #4f46e5;
+  --primary-light: #a0a0ff;
+  --secondary: #2575fc;
+  --secondary-dark: #1e40af;
+  --accent: #ff6b6b;
+  --dark: #0f0c29;
+  --dark-light: #302b63;
+  --light: #ffffff;
+  --gray: #64748b;
+  --gray-light: #a0a0ff;
+  --gray-dark: #334155;
+  --primary-color: #6a11cb;
+  --secondary-color: #2575fc;
+  --accent-color: #ff6b6b;
+  --dark-bg: #0f0c29;
+  --dark-bg-gradient-1: #302b63;
+  --dark-bg-gradient-2: #24243e;
+  --card-bg: rgba(15, 14, 32, 0.8);
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0ff;
+  --text-muted: rgba(255, 255, 255, 0.5);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --success-color: #38ef7d;
+
+  /* Common UI elements */
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 16px;
+  --border-radius-full: 9999px;
+
+  /* Shadows and effects */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --glow-primary: 0 0 10px rgba(106, 17, 203, 0.5), 0 0 20px rgba(106, 17, 203, 0.2);
+  --glow-secondary: 0 0 15px rgba(37, 117, 252, 0.5);
+
+  /* Animations */
+  --transition-normal: all 0.3s ease;
+  --transition-slow: all 0.5s ease;
+}
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rajdhani", sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: linear-gradient(135deg, var(--dark-bg), var(--dark-bg-gradient-1), var(--dark-bg-gradient-2));
+  background-attachment: fixed;
+  min-height: 100vh;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 30%, rgba(106, 17, 203, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(37, 117, 252, 0.15) 0%, transparent 40%);
+  z-index: -1;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* Common components */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: var(--border-radius-md);
+  font-weight: 600;
+  transition: var(--transition-normal);
+  text-align: center;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Navigation buttons */
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-button {
+  background: rgba(106, 17, 203, 0.1);
+  border: 1px solid rgba(106, 17, 203, 0.2);
+  color: var(--text-secondary);
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-button:hover {
+  background: rgba(106, 17, 203, 0.2);
+  color: var(--text-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--glow-primary);
+}
+
+.nav-button.active {
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border: none;
+  box-shadow: var(--glow-primary);
+}
+
+.nav-highlight {
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  padding: 5px 12px;
+  border-radius: 20px;
+  color: white !important;
+  box-shadow: 0 3px 10px rgba(106, 17, 203, 0.3);
+}
+
+.nav-highlight:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(106, 17, 203, 0.4);
+}
+
+.nav-highlight::after {
+  display: none;
+}
+
+/* Donation modal */
+.donation-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.donation-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.donation-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+}
+
+.donation-content {
+  position: relative;
+  background: linear-gradient(to bottom right, #1e1e3f, #0f0c29);
+  border-radius: var(--border-radius-lg);
+  padding: 1px;
+  max-width: 90%;
+  width: 400px;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.donation-modal.active .donation-content {
+  transform: scale(1);
+}
+
+.donation-border {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+}
+
+.donation-border-animation {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color), var(--primary-color));
+  animation: rotate 8s linear infinite;
+  opacity: 0.7;
+}
+
+.donation-body {
+  position: relative;
+  background: var(--dark-bg);
+  border-radius: calc(var(--border-radius-lg) - 1px);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.close-donation {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius-full);
+  transition: var(--transition-normal);
+}
+
+.close-donation:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg);
+}
+
+.donation-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.donation-text {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.donation-small-text {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  margin-top: 16px;
+  text-align: center;
+}
+
+.qris-container {
+  position: relative;
+  padding: 3px;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+}
+
+.qris-border {
+  position: absolute;
+  inset: 0;
+}
+
+.qris-border-animation {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color), var(--primary-color));
+  animation: pulse 2s infinite;
+  opacity: 0.7;
+  border-radius: var(--border-radius-md);
+}
+
+.qris-image-container {
+  position: relative;
+  background: white;
+  padding: 10px;
+  border-radius: calc(var(--border-radius-md) - 2px);
+}
+
+.qris-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Animations */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .nav-buttons {
+    gap: 8px;
+  }
+
+  .nav-button {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+
+  .nav-highlight {
+    margin-top: 10px;
+    display: inline-block;
+  }
+}
+
+@media (max-width: 480px) {
+  .donation-content {
+    width: 90%;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+
+  .nav-buttons {
+    gap: 5px;
+  }
+
+  .nav-button {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Current year script support */
+#current-year {
+  display: inline;
+}
+
+/* Floating Donation Button */
+.donate-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  box-shadow: 0 5px 20px rgba(106, 17, 203, 0.5);
+  cursor: pointer;
+  z-index: 100;
+  transition: all 0.3s ease;
+  animation: pulse-donate 2s infinite;
+}
+
+@keyframes pulse-donate {
+  0% {
+    box-shadow: 0 0 0 0 rgba(106, 17, 203, 0.7);
+    transform: scale(1);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(106, 17, 203, 0);
+    transform: scale(1.05);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(106, 17, 203, 0);
+    transform: scale(1);
+  }
+}
+
+.donate-btn:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .donate-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-buttons {
+    gap: 5px;
+  }
+
+  .nav-button {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+}
+/* Subscription page specific styles */
+:root {
+  --color-bg: #0f0c29;
+  --color-bg-card: rgba(15, 14, 32, 0.8);
+  --color-primary: #6a11cb;
+  --color-secondary: #2575fc;
+  --color-accent: #ff6b6b;
+  --color-text: #ffffff;
+  --color-text-dim: #a0a0ff;
+  --color-success: #38ef7d;
+  --color-error: #ff2266;
+  --color-input-bg: rgba(106, 17, 203, 0.05);
+  --color-input-border: rgba(106, 17, 203, 0.2);
+  --glow-primary: 0 0 10px rgba(106, 17, 203, 0.5), 0 0 20px rgba(106, 17, 203, 0.2);
+  --glow-secondary: 0 0 10px rgba(37, 117, 252, 0.5), 0 0 20px rgba(37, 117, 252, 0.2);
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --card-width: 100%;
+  --card-max-width: 480px;
+  --card-padding: 1.5rem;
+  --card-border-radius: 12px;
+}
+
+body {
+  font-family: "Rajdhani", sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: var(--color-text);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-attachment: fixed;
+  position: relative;
+  overflow-x: hidden;
+  padding: 1rem 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle at 20% 30%, rgba(106, 17, 203, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(37, 117, 252, 0.15) 0%, transparent 40%);
+  z-index: -1;
+}
+
+.container {
+  width: var(--card-width);
+  max-width: var(--card-max-width);
+  padding: 0 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.card {
+  background: var(--color-bg-card);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(106, 17, 203, 0.1);
+  width: 100%;
+}
+
+.card::before,
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary), var(--color-accent));
+}
+
+.card::after,
+.footer::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(106, 17, 203, 0.5), rgba(37, 117, 252, 0.5), rgba(255, 107, 107, 0.5));
+  filter: blur(1px);
+}
+
+.title-container {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.title {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  margin: 0;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+.title::after {
+  content: "SUB";
+  position: absolute;
+  top: -8px;
+  right: -30px;
+  font-size: 0.7rem;
+  font-weight: 400;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  padding: 2px 5px;
+  border-radius: 3px;
+  -webkit-text-fill-color: var(--color-bg);
+  transform: rotate(15deg);
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: var(--color-text-dim);
+  margin-top: 0.3rem;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  letter-spacing: 0.5px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+  background: var(--color-input-bg);
+  border: 1px solid var(--color-input-border);
+  border-radius: 8px;
+  color: var(--color-text);
+  font-family: "Rajdhani", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: var(--glow-primary);
+}
+
+select.form-control {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%236a11cb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.8rem center;
+  background-size: 1rem;
+  padding-right: 2.2rem;
+}
+
+.btn {
+  width: 100%;
+  padding: 0.8rem;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn:hover {
+  box-shadow: var(--glow-primary);
+  transform: translateY(-2px);
+}
+
+.loading {
+  display: none;
+  text-align: center;
+  margin: 1.5rem 0;
+  color: var(--color-primary);
+}
+
+.spinner {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(106, 17, 203, 0.1);
+  border-radius: 50%;
+  border-top-color: var(--color-primary);
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-text {
+  margin-top: 0.8rem;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.result {
+  display: none;
+  margin-top: 1.5rem;
+  position: relative;
+}
+
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.result-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.1rem;
+  color: var(--color-success);
+}
+
+.output-container {
+  position: relative;
+  margin-bottom: 0.8rem;
+}
+
+.output {
+  width: 100%;
+  height: 180px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--color-input-border);
+  border-radius: 8px;
+  color: var(--color-text);
+  padding: 0.8rem;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 0.85rem;
+  resize: vertical;
+  line-height: 1.4;
+}
+
+.output:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.copy-btn {
+  background: linear-gradient(90deg, var(--color-success), var(--color-primary));
+  color: var(--color-bg);
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.copy-btn:hover {
+  box-shadow: 0 0 10px rgba(0, 255, 170, 0.5);
+  transform: translateY(-2px);
+}
+
+.copy-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.error-message {
+  color: var(--color-error);
+  text-align: center;
+  margin-top: 0.8rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  :root {
+    --card-padding: 1.2rem;
+  }
+
+  .container {
+    padding: 0 0.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+  }
+
+  .form-control {
+    padding: 0.6rem 0.7rem;
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Cyberpunk details */
+.tech-detail {
+  position: absolute;
+  background: var(--color-primary);
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.tech-detail-1 {
+  width: 40px;
+  height: 40px;
+  top: 20px;
+  right: 20px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px var(--color-primary);
+}
+
+.tech-detail-2 {
+  width: 80px;
+  height: 2px;
+  bottom: 40px;
+  left: -20px;
+  transform: rotate(45deg);
+}
+
+.tech-detail-3 {
+  width: 15px;
+  height: 15px;
+  bottom: 20px;
+  right: 40px;
+  transform: rotate(45deg);
+}
+
+/* Animated typing effect for loading */
+.typing {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid var(--color-primary);
+  width: 0;
+  animation: typing 3s steps(30, end) infinite;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  80% {
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.form-group.uuid-group {
+  position: relative;
+}
+
+.uuid-generate {
+  position: absolute;
+  right: 8px;
+  top: 36px;
+  background: rgba(106, 17, 203, 0.1);
+  border: none;
+  color: var(--color-primary);
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: var(--transition);
+}
+
+.uuid-generate:hover {
+  background: rgba(106, 17, 203, 0.2);
+}
+
+.form-row {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.form-row .form-group {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.info-badge {
+  display: inline-block;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  font-size: 0.65rem;
+  padding: 1px 5px;
+  border-radius: 3px;
+  margin-left: 5px;
+  vertical-align: middle;
+  font-weight: 600;
+}
+
+.custom-bug-container {
+  display: none;
+}
+
+/* Footer styles */
+.footer {
+  width: var(--card-width);
+  max-width: var(--card-max-width);
+  background: var(--color-bg-card);
+  border-radius: var(--card-border-radius);
+  padding: 1.2rem;
+  position: relative;
+  border: 1px solid rgba(106, 17, 203, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  margin: 0 0.75rem;
+}
+
+.footer-logo {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-powered {
+  font-size: 0.8rem;
+  color: var(--color-text-dim);
+  margin-bottom: 0.6rem;
+  font-family: "Share Tech Mono", monospace;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  background: rgba(106, 17, 203, 0.05);
+  border: 1px solid rgba(106, 17, 203, 0.1);
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.social-link:hover {
+  background: rgba(106, 17, 203, 0.1);
+  box-shadow: var(--glow-primary);
+  transform: translateY(-2px);
+}
+
+.social-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.footer-year {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--color-accent);
+  margin-top: 0.4rem;
+  letter-spacing: 1px;
+}
+
+.circuit-line {
+  position: absolute;
+  background: var(--color-primary);
+  opacity: 0.1;
+}
+
+.circuit-line-1 {
+  width: 60px;
+  height: 1px;
+  top: 20px;
+  left: 20px;
+}
+
+.circuit-line-2 {
+  width: 1px;
+  height: 30px;
+  top: 20px;
+  left: 20px;
+}
+
+.circuit-line-3 {
+  width: 40px;
+  height: 1px;
+  bottom: 25px;
+  right: 30px;
+}
+
+.circuit-line-4 {
+  width: 1px;
+  height: 25px;
+  bottom: 25px;
+  right: 30px;
+}
+
+.circuit-dot {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  opacity: 0.2;
+}
+
+.circuit-dot-1 {
+  top: 20px;
+  left: 20px;
+}
+
+.circuit-dot-2 {
+  top: 50px;
+  left: 20px;
+}
+
+.circuit-dot-3 {
+  bottom: 25px;
+  right: 30px;
+}
+
+.circuit-dot-4 {
+  bottom: 50px;
+  right: 30px;
+}
+
+/* Validation status styles */
+.validation-status {
+  display: none;
+  margin-top: 1rem;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 0.9rem;
+  color: var(--color-text-dim);
+}
+
+.validation-progress {
+  margin-top: 0.5rem;
+  height: 6px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.validation-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  transition: width 0.3s ease;
+}
+
+.validation-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.validation-check {
+  margin-right: 0.5rem;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+
+.form-group.validation-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.form-check-input {
+  margin-right: 0.5rem;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  accent-color: var(--color-primary);
+}
+
+.form-check-label {
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.select-info {
+  font-size: 0.75rem;
+  color: var(--color-text-dim);
+  margin-top: 0.3rem;
+  font-style: italic;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="tech-detail tech-detail-1"></div>
+            <div class="tech-detail tech-detail-2"></div>
+            <div class="tech-detail tech-detail-3"></div>
+            
+            <div class="title-container">
+                <h1 class="title">INCONIGTO - MODE</h1>
+                <p class="subtitle">Advanced Subscription Link Generator</p>
+            </div>
+
+            <div class="nav-buttons">
+                <a href="/" class="nav-button">
+                    <i class="fas fa-home"></i> Home
+                </a>
+                <a href="sub" class="nav-button active">
+                    <i class="fas fa-rss"></i> Subscription
+                </a>
+                <a href="link" class="nav-button">
+                    <i class="fas fa-link"></i> Link Generator
+                </a>
+                <a href="converter" class="nav-button">
+                    <i class="fas fa-exchange-alt"></i> Converter
+                </a>
+            </div>
+            
+            <form id="subLinkForm">
+                <div class="form-group">
+                    <label for="configType">PROTOCOL TYPE</label>
+                    <select id="configType" class="form-control" required>
+                        <option value="vless">VLESS</option>
+                        <option value="vmess">VMESS</option>
+                        <option value="trojan">TROJAN</option>
+                        <option value="shadowsocks">SHADOWSOCKS</option>
+                        <option value="mix">MIX (ALL PROTOCOLS)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="formatType">FORMAT TYPE</label>
+                    <select id="formatType" class="form-control" required>
+                        <option value="v2ray">Link V2RAY</option>
+                        <option value="nekobox">Config NEKOBOX</option>
+                        <option value="clash">Proxy_Provider CLASH</option>
+                    </select>
+                </div>
+                
+                <div class="form-group uuid-group">
+                    <label for="uuid">UUID</label>
+                    <input type="text" id="uuid" class="form-control" value="bbbbbbbb-cccc-4ddd-eeee-ffffffffffff" required>
+                    <button type="button" id="generateUuid" class="uuid-generate">GENERATE</button>
+                </div>
+                
+                <div class="form-group">
+                    <label for="bugType">BUG TYPE</label>
+                    <select id="bugType" class="form-control" required>
+                        <option value="default">DIRECT</option>
+                        <option value="non-wildcard">WEBSOCKET</option>
+                        <option value="wildcard">WILDCARD WEBSOCKET</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="mainDomain">MAIN DOMAIN <span class="info-badge">SELECT</span></label>
+                    <select id="mainDomain" class="form-control" required>
+                        <!-- Will be populated from MainDomains array -->
+                    </select>
+                </div>
+                
+                <div id="customBugContainer" class="form-group custom-bug-container">
+                    <label for="customBug">CUSTOM BUG</label>
+                    <input type="text" id="customBug" class="form-control" placeholder="Example : BUG-WLG.COM, BUG-VIU.COM, BUG-ZOOM.COM">
+                    <div class="select-info">Pisah Dengan Koma Jika Ingin Banyak BUG sekaligus</div>
+                    <div class="select-info">Supported Wildcard : ava.game.naver.com, quiz.int.vidio.com, graph.instagram.com, zaintest.vuclip.com, support.zoom.us, cache.netflix.com</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="tls">TLS ENCRYPTION</label>
+                    <select id="tls" class="form-control">
+                        <option value="true">ENABLED</option>
+                        <option value="false">DISABLED</option>
+                    </select>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="country">REGION FILTER</label>
+                        <select id="country" class="form-control">
+                            <option value="">Loading regions...</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="limit">QUANTITY</label>
+                        <input type="number" id="limit" class="form-control" min="1" max="50" value="5" placeholder="Max 50" required>
+                    </div>
+                </div>
+                
+                <div class="form-group validation-group">
+                    <label class="form-check">
+                        <input type="checkbox" id="validateProxies" class="form-check-input" checked>
+                        <span class="form-check-label">Filter ProxyIP ACTIVE Untuk Subscription?</span>
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn">Generate Configuration</button>
+            </form>
+            
+            <div id="loading" class="loading">
+                <div class="spinner"></div>
+                <div class="loading-text typing">Fetching proxy data and generating configs...</div>
+            </div>
+            
+            <div id="validation-status" class="validation-status">
+                <div>Validating proxies... <span id="validation-count">0/0</span></div>
+                <div class="validation-progress">
+                    <div id="validation-bar" class="validation-bar"></div>
+                </div>
+                <div class="validation-stats">
+                    <div>Valid: <span id="valid-count">0</span></div>
+                    <div>Invalid: <span id="invalid-count">0</span></div>
+                </div>
+            </div>
+            
+            <div id="error-message" class="error-message"></div>
+            
+            <div id="result" class="result">
+                <div class="result-header">
+                    <div class="result-title">CONFIGURATION GENERATED</div>
+                </div>
+                <div class="output-container">
+                    <textarea id="output" class="output" readonly></textarea>
+                </div>
+                <button id="copyLink" class="copy-btn">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    COPY CONFIGURATION
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="circuit-line circuit-line-1"></div>
+        <div class="circuit-line circuit-line-2"></div>
+        <div class="circuit-line circuit-line-3"></div>
+        <div class="circuit-line circuit-line-4"></div>
+        <div class="circuit-dot circuit-dot-1"></div>
+        <div class="circuit-dot circuit-dot-2"></div>
+        <div class="circuit-dot circuit-dot-3"></div>
+        <div class="circuit-dot circuit-dot-4"></div>
+        
+        <div class="footer-logo">INCONIGTO-MODE</div>
+        <div class="footer-powered">POWERED BY SECURE TECHNOLOGY</div>
+        <div class="footer-social">
+            <a href="https://t.me/Noir7R" class="social-link" target="_blank">
+                <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21.198 2.433a2.242 2.242 0 0 0-1.022.215l-8.609 3.33c-2.068.8-4.133 1.598-5.724 2.21a405.15 405.15 0 0 1-2.849 1.09c-.42.147-.99.332-1.473.901-.728.968.193 1.798.919 2.286 1.61.516 3.275 1.009 4.654 1.472.846 1.467 1.618 2.796 2.503 4.532.545 1.062 1.587 2.739 3.19 2.756 1.26.033 2.052-.6 3.542-1.95a142.91 142.91 0 0 1 2.43-2.053c1.686-.142 3.382-.284 5.12-.436.887-.075 1.92-.262 2.405-1.226.436-.877-.015-1.35-.48-1.874l-3.881-4.369-5.481-6.174S22.185 2.128 21.198 2.433z"></path>
+                    <path d="M18.167 7.068c.237 1.632-1.162 6.872-1.766 8.849"></path>
+                </svg>
+                @Noir7R
+            </a>
+        </div>    
+        <div class="footer-social">
+            <a href="https://t.me/inconigto_Mode" class="social-link" target="_blank">
+                <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21.198 2.433a2.242 2.242 0 0 0-1.022.215l-8.609 3.33c-2.068.8-4.133 1.598-5.724 2.21a405.15 405.15 0 0 1-2.849 1.09c-.42.147-.99.332-1.473.901-.728.968.193 1.798.919 2.286 1.61.516 3.275 1.009 4.654 1.472.846 1.467 1.618 2.796 2.503 4.532.545 1.062 1.587 2.739 3.19 2.756 1.26.033 2.052-.6 3.542-1.95a142.91 142.91 0 0 1 2.43-2.053c1.686-.142 3.382-.284 5.12-.436.887-.075 1.92-.262 2.405-1.226.436-.877-.015-1.35-.48-1.874l-3.881-4.369-5.481-6.174S22.185 2.128 21.198 2.433z"></path>
+                    <path d="M18.167 7.068c.237 1.632-1.162 6.872-1.766 8.849"></path>
+                </svg>
+                @inconigto_Mode
+            </a>
+            <a href="https://t.me/InconigtoMode" class="social-link" target="_blank">
+                <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21.198 2.433a2.242 2.242 0 0 0-1.022.215l-8.609 3.33c-2.068.8-4.133 1.598-5.724 2.21a405.15 405.15 0 0 1-2.849 1.09c-.42.147-.99.332-1.473.901-.728.968.193 1.798.919 2.286 1.61.516 3.275 1.009 4.654 1.472.846 1.467 1.618 2.796 2.503 4.532.545 1.062 1.587 2.739 3.19 2.756 1.26.033 2.052-.6 3.542-1.95a142.91 142.91 0 0 1 2.43-2.053c1.686-.142 3.382-.284 5.12-.436.887-.075 1.92-.262 2.405-1.226.436-.877-.015-1.35-.48-1.874l-3.881-4.369-5.481-6.174S22.185 2.128 21.198 2.433z"></path>
+                    <path d="M18.167 7.068c.237 1.632-1.162 6.872-1.766 8.849"></path>
+                </svg>
+                @InconigtoMode
+            </a>
+        </div>
+        <div class="footer-year">© <span id="current-year"></span></div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+const _0x3193d6=_0xb3a3;(function(_0x5d5e36,_0x5dfcd7){const _0x46064a=_0xb3a3,_0x53abb=_0x5d5e36();while(!![]){try{const _0x1c6234=parseInt(_0x46064a(0x18a))/0x1+parseInt(_0x46064a(0x16f))/0x2*(-parseInt(_0x46064a(0x18f))/0x3)+parseInt(_0x46064a(0x1fe))/0x4+-parseInt(_0x46064a(0x187))/0x5+-parseInt(_0x46064a(0x1e1))/0x6*(-parseInt(_0x46064a(0x230))/0x7)+-parseInt(_0x46064a(0x1ea))/0x8*(-parseInt(_0x46064a(0x20b))/0x9)+-parseInt(_0x46064a(0x16c))/0xa;if(_0x1c6234===_0x5dfcd7)break;else _0x53abb['push'](_0x53abb['shift']());}catch(_0x407ab8){_0x53abb['push'](_0x53abb['shift']());}}}(_0x1350,0xbb563));const CONFIG={'proxyListUrl':_0x3193d6(0x225),'apiCheckUrl':_0x3193d6(0x24c),'mainDomains':['afrcloud.xyz',_0x3193d6(0x250),_0x3193d6(0x226),_0x3193d6(0x1f3)],'defaultUuid':_0x3193d6(0x217),'maxProxies':0x32,'defaultProxyCount':0x5,'pathTemplate':'/Inconigto-Mode/{ip}-{port}'};let proxyList=[],filteredProxyList=[],validatedProxies=[],validationInProgress=![],totalValidated=0x0,validCount=0x0,invalidCount=0x0;const form=document[_0x3193d6(0x183)](_0x3193d6(0x22d)),configTypeSelect=document[_0x3193d6(0x183)]('configType'),formatTypeSelect=document['getElementById'](_0x3193d6(0x1e3)),uuidInput=document[_0x3193d6(0x183)](_0x3193d6(0x228)),generateUuidBtn=document[_0x3193d6(0x183)](_0x3193d6(0x23a)),bugTypeSelect=document['getElementById'](_0x3193d6(0x1cb)),mainDomainSelect=document[_0x3193d6(0x183)](_0x3193d6(0x16b)),customBugContainer=document[_0x3193d6(0x183)](_0x3193d6(0x163)),customBugInput=document[_0x3193d6(0x183)](_0x3193d6(0x1d5)),tlsSelect=document[_0x3193d6(0x183)](_0x3193d6(0x186)),countrySelect=document['getElementById'](_0x3193d6(0x181)),limitInput=document[_0x3193d6(0x183)]('limit'),validateProxiesCheckbox=document[_0x3193d6(0x183)](_0x3193d6(0x1b9)),loadingElement=document[_0x3193d6(0x183)](_0x3193d6(0x21b)),validationStatusElement=document[_0x3193d6(0x183)](_0x3193d6(0x1ce)),validationCountElement=document[_0x3193d6(0x183)]('validation-count'),validationBarElement=document['getElementById'](_0x3193d6(0x17c)),validCountElement=document[_0x3193d6(0x183)](_0x3193d6(0x19f)),invalidCountElement=document[_0x3193d6(0x183)](_0x3193d6(0x1a7)),errorMessageElement=document[_0x3193d6(0x183)](_0x3193d6(0x1a3)),resultElement=document[_0x3193d6(0x183)](_0x3193d6(0x1d8)),outputElement=document[_0x3193d6(0x183)](_0x3193d6(0x169)),copyLinkBtn=document['getElementById'](_0x3193d6(0x1d2));function generateUUIDv4(){return crypto['randomUUID']();}async function copyToClipboard(_0x51063f){const _0x41b1f2=_0x3193d6;try{return await navigator[_0x41b1f2(0x23e)]['writeText'](_0x51063f),!![];}catch(_0x5c9ebb){return console['error']('Failed\x20to\x20copy:\x20',_0x5c9ebb),![];}}function safeBase64Encode(_0x19deb5){const _0x736bb4=_0x3193d6;try{return btoa(unescape(encodeURIComponent(_0x19deb5)));}catch(_0x270293){return console[_0x736bb4(0x198)](_0x736bb4(0x244),_0x270293),'';}}document[_0x3193d6(0x22b)](_0x3193d6(0x216),()=>{populateMainDomains(),setupEventListeners(),loadProxyList();});function populateMainDomains(){const _0x5c275a=_0x3193d6;CONFIG['mainDomains'][_0x5c275a(0x25c)](_0x39d3b3=>{const _0x9eef97=_0x5c275a,_0x5ef38d=document[_0x9eef97(0x1ae)]('option');_0x5ef38d['value']=_0x39d3b3,_0x5ef38d['textContent']=_0x39d3b3,mainDomainSelect[_0x9eef97(0x1b5)](_0x5ef38d);});}function setupEventListeners(){const _0x197c7e=_0x3193d6;generateUuidBtn[_0x197c7e(0x22b)](_0x197c7e(0x21d),()=>{const _0x8aed6b=_0x197c7e;uuidInput[_0x8aed6b(0x1d6)]=generateUUIDv4();}),bugTypeSelect[_0x197c7e(0x22b)](_0x197c7e(0x1a5),()=>{const _0x1c62ac=_0x197c7e;bugTypeSelect[_0x1c62ac(0x1d6)]===_0x1c62ac(0x1f6)||bugTypeSelect['value']===_0x1c62ac(0x205)?customBugContainer['style'][_0x1c62ac(0x263)]=_0x1c62ac(0x1e5):customBugContainer[_0x1c62ac(0x243)]['display']='none';}),form['addEventListener'](_0x197c7e(0x215),handleFormSubmit),copyLinkBtn[_0x197c7e(0x22b)](_0x197c7e(0x21d),()=>{const _0x4ed620=_0x197c7e;copyToClipboard(outputElement[_0x4ed620(0x1d6)])[_0x4ed620(0x1e7)](_0x18af53=>{const _0xd1921b=_0x4ed620;_0x18af53&&(copyLinkBtn[_0xd1921b(0x1c7)]=_0xd1921b(0x212),setTimeout(()=>{const _0x84c8fb=_0xd1921b;copyLinkBtn[_0x84c8fb(0x1c7)]=_0x84c8fb(0x199);},0x7d0));});});}function loadProxyList(){const _0x20f09f=_0x3193d6;showLoading(_0x20f09f(0x1d0)),fetch(CONFIG['proxyListUrl'])['then'](_0x306987=>{const _0x2aa4f7=_0x20f09f;if(!_0x306987['ok'])throw new Error(_0x2aa4f7(0x1eb));return _0x306987[_0x2aa4f7(0x1b4)]();})[_0x20f09f(0x1e7)](_0x1f4893=>{processProxyData(_0x1f4893),hideLoading();})[_0x20f09f(0x1bf)](_0x28492b=>{const _0x3aeb06=_0x20f09f;console['error'](_0x3aeb06(0x238),_0x28492b),showError(_0x3aeb06(0x23c)),hideLoading();});}function processProxyData(_0x3eeb6b){const _0x5cefc8=_0x3193d6,_0x222bd8=_0x3eeb6b[_0x5cefc8(0x1f9)](/\r?\n/)['filter'](_0x5d1acd=>_0x5d1acd[_0x5cefc8(0x25d)]()!=='');if(_0x222bd8[_0x5cefc8(0x1b7)]===0x0){showError(_0x5cefc8(0x200));return;}let _0xb5dd9f=',';const _0x16d597=_0x222bd8[0x0];if(_0x16d597[_0x5cefc8(0x18e)]('\x09'))_0xb5dd9f='\x09';else{if(_0x16d597[_0x5cefc8(0x18e)]('|'))_0xb5dd9f='|';else _0x16d597[_0x5cefc8(0x18e)](';')&&(_0xb5dd9f=';');}proxyList=_0x222bd8[_0x5cefc8(0x1ee)](_0x4cf7e9=>{const _0x74be13=_0x5cefc8,_0x2382fd=_0x4cf7e9[_0x74be13(0x1f9)](_0xb5dd9f);if(_0x2382fd[_0x74be13(0x1b7)]>=0x2)return{'ip':_0x2382fd[0x0][_0x74be13(0x25d)](),'port':_0x2382fd[0x1]['trim'](),'country':_0x2382fd[_0x74be13(0x1b7)]>=0x3?_0x2382fd[0x2]['trim']():_0x74be13(0x1fa),'provider':_0x2382fd[_0x74be13(0x1b7)]>=0x4?_0x2382fd[0x3][_0x74be13(0x25d)]():_0x74be13(0x1a2)};return null;})['filter'](_0x4097ca=>_0x4097ca&&_0x4097ca['ip']&&_0x4097ca[_0x5cefc8(0x24e)]),populateCountryDropdown();}function populateCountryDropdown(){const _0x37afe9=_0x3193d6,_0x34e935=[...new Set(proxyList[_0x37afe9(0x1ee)](_0xee7a30=>_0xee7a30[_0x37afe9(0x181)]))];_0x34e935[_0x37afe9(0x251)](),countrySelect[_0x37afe9(0x1c7)]='';const _0x4f78c0=document[_0x37afe9(0x1ae)](_0x37afe9(0x21c));_0x4f78c0['value']='',_0x4f78c0['textContent']=_0x37afe9(0x1b0),countrySelect[_0x37afe9(0x1b5)](_0x4f78c0),_0x34e935[_0x37afe9(0x25c)](_0x272d5c=>{const _0x32d2db=_0x37afe9,_0x2f8468=document[_0x32d2db(0x1ae)]('option');_0x2f8468[_0x32d2db(0x1d6)]=_0x272d5c,_0x2f8468[_0x32d2db(0x16e)]=_0x272d5c,countrySelect[_0x32d2db(0x1b5)](_0x2f8468);});}async function handleFormSubmit(_0x52b14a){const _0x41e497=_0x3193d6;_0x52b14a[_0x41e497(0x1d1)](),errorMessageElement[_0x41e497(0x16e)]='',errorMessageElement[_0x41e497(0x243)][_0x41e497(0x263)]=_0x41e497(0x204);const _0x1e1b2b=configTypeSelect[_0x41e497(0x1d6)],_0x280f87=formatTypeSelect['value'],_0x56614b=uuidInput[_0x41e497(0x1d6)],_0x4e3880=bugTypeSelect[_0x41e497(0x1d6)],_0x1e1d39=mainDomainSelect['value'],_0x15f39c=customBugInput[_0x41e497(0x1d6)],_0x488242=tlsSelect[_0x41e497(0x1d6)]===_0x41e497(0x17a),_0x474333=countrySelect[_0x41e497(0x1d6)],_0x4d1fb5=Number[_0x41e497(0x184)](limitInput[_0x41e497(0x1d6)],0xa),_0xee72c=validateProxiesCheckbox[_0x41e497(0x23b)];if(!_0x56614b){showError(_0x41e497(0x185));return;}if(_0x4d1fb5<0x1||_0x4d1fb5>CONFIG['maxProxies']){showError(_0x41e497(0x256)+CONFIG[_0x41e497(0x1c4)]+'.');return;}filteredProxyList=_0x474333?proxyList[_0x41e497(0x248)](_0xdad878=>_0xdad878[_0x41e497(0x181)]===_0x474333):[...proxyList];if(filteredProxyList[_0x41e497(0x1b7)]===0x0){showError(_0x41e497(0x25a));return;}shuffleArray(filteredProxyList),filteredProxyList=filteredProxyList[_0x41e497(0x208)](0x0,_0x4d1fb5),showLoading(_0x41e497(0x1dc));_0xee72c&&await validateProxyList();const _0x4b1766=generateConfiguration(_0x1e1b2b,_0x280f87,_0x56614b,_0x4e3880,_0x1e1d39,_0x15f39c,_0x488242);showResult(_0x4b1766);}async function validateProxyList(){const _0x8f42a9=_0x3193d6;validationInProgress=!![],validatedProxies=[],totalValidated=0x0,validCount=0x0,invalidCount=0x0,validationStatusElement[_0x8f42a9(0x243)][_0x8f42a9(0x263)]=_0x8f42a9(0x1e5),validationCountElement[_0x8f42a9(0x16e)]='0/'+filteredProxyList[_0x8f42a9(0x1b7)],validationBarElement['style'][_0x8f42a9(0x191)]='0%',validCountElement[_0x8f42a9(0x16e)]='0',invalidCountElement['textContent']='0',invalidCountElement[_0x8f42a9(0x16e)]='0';const _0xb76f60=[...filteredProxyList],_0x18c18d=0x5,_0x44a81e=Math[_0x8f42a9(0x240)](_0xb76f60[_0x8f42a9(0x1b7)]/_0x18c18d);for(let _0x847087=0x0;_0x847087<_0x44a81e;_0x847087++){const _0x5e4dfe=_0x847087*_0x18c18d,_0x4eb025=Math[_0x8f42a9(0x20c)](_0x5e4dfe+_0x18c18d,_0xb76f60[_0x8f42a9(0x1b7)]),_0x4e63a9=_0xb76f60['slice'](_0x5e4dfe,_0x4eb025);await Promise[_0x8f42a9(0x1f1)](_0x4e63a9[_0x8f42a9(0x1ee)](async _0x248d80=>{const _0x728e5=_0x8f42a9,_0x4608ab=await validateProxy(_0x248d80);totalValidated++;const _0xfc108b=totalValidated/_0xb76f60['length']*0x64;validationCountElement[_0x728e5(0x16e)]=totalValidated+'/'+_0xb76f60[_0x728e5(0x1b7)],validationBarElement[_0x728e5(0x243)][_0x728e5(0x191)]=_0xfc108b+'%',_0x4608ab?(validCount++,validCountElement[_0x728e5(0x16e)]=validCount,validatedProxies[_0x728e5(0x20d)](_0x248d80)):(invalidCount++,invalidCountElement[_0x728e5(0x16e)]=invalidCount);}));}validatedProxies[_0x8f42a9(0x1b7)]>0x0&&(filteredProxyList=validatedProxies),validationInProgress=![];}async function validateProxy(_0x1620b2){const _0x5e0823=_0x3193d6;try{const _0x516e28=await fetch(CONFIG[_0x5e0823(0x1ed)]+_0x5e0823(0x1da)+_0x1620b2['ip']+_0x5e0823(0x1d4)+_0x1620b2[_0x5e0823(0x24e)]),_0x6a2cda=await _0x516e28[_0x5e0823(0x1bb)]();return _0x6a2cda[_0x5e0823(0x19e)]===!![];}catch(_0x1caed2){return console[_0x5e0823(0x198)](_0x5e0823(0x214),_0x1caed2),![];}}function generateConfiguration(_0x413146,_0x3b9b09,_0x58b0e5,_0x494cc6,_0x3f5f8c,_0x17afdb,_0x4dc35f){const _0x64d718=_0x3193d6,_0x463ce4=filteredProxyList;switch(_0x3b9b09){case _0x64d718(0x22f):return generateV2rayLinks(_0x413146,_0x463ce4,_0x58b0e5,_0x494cc6,_0x3f5f8c,_0x17afdb,_0x4dc35f);case _0x64d718(0x260):return generateClashConfig(_0x413146,_0x463ce4,_0x58b0e5,_0x494cc6,_0x3f5f8c,_0x17afdb,_0x4dc35f);case'nekobox':const _0xa0492b=[];_0x463ce4['forEach'](_0xea6539=>{const _0x1faf05=_0x64d718,_0x45279a=CONFIG[_0x1faf05(0x1ba)][_0x1faf05(0x177)](_0x1faf05(0x1be),_0xea6539['ip'])['replace'](_0x1faf05(0x1ca),_0xea6539[_0x1faf05(0x24e)]),_0x126149=_0x4dc35f?0x1bb:0x50,_0x36eacb=_0x17afdb&&(_0x494cc6===_0x1faf05(0x1f6)||_0x494cc6==='wildcard')?_0x17afdb[_0x1faf05(0x1f9)](',')['map'](_0x17fbda=>_0x17fbda[_0x1faf05(0x25d)]()):[_0x3f5f8c];_0x36eacb['forEach'](_0x41bb3f=>{const _0x2410f0=_0x1faf05;let _0x390fb2,_0x325404,_0x11ddbd;switch(_0x494cc6){case _0x2410f0(0x201):_0x390fb2=_0x3f5f8c,_0x325404=_0x3f5f8c,_0x11ddbd=_0x3f5f8c;break;case _0x2410f0(0x1f6):_0x390fb2=_0x41bb3f,_0x325404=_0x3f5f8c,_0x11ddbd=_0x3f5f8c;break;case _0x2410f0(0x205):_0x390fb2=_0x41bb3f,_0x325404=_0x41bb3f+'.'+_0x3f5f8c,_0x11ddbd=_0x41bb3f+'.'+_0x3f5f8c;break;}const _0xdaccab=_0xea6539[_0x2410f0(0x181)],_0x31fa0e=_0xea6539[_0x2410f0(0x1a6)];(_0x413146==='vmess'||_0x413146===_0x2410f0(0x1e6))&&_0xa0492b['push']({'type':'vmess','name':'['+(_0xa0492b[_0x2410f0(0x1b7)]+0x1)+']\x20('+_0xdaccab+')\x20'+_0x31fa0e+_0x2410f0(0x239)+(_0x4dc35f?_0x2410f0(0x1af):_0x2410f0(0x175))+']','server':_0x390fb2,'port':_0x126149,'uuid':_0x58b0e5,'tls':_0x4dc35f,'sni':_0x11ddbd,'wsHost':_0x325404,'wsPath':_0x45279a}),(_0x413146===_0x2410f0(0x18b)||_0x413146===_0x2410f0(0x1e6))&&_0xa0492b['push']({'type':'vless','name':'['+(_0xa0492b['length']+0x1)+_0x2410f0(0x171)+_0xdaccab+')\x20'+_0x31fa0e+_0x2410f0(0x173)+(_0x4dc35f?_0x2410f0(0x1af):_0x2410f0(0x175))+']','server':_0x390fb2,'port':_0x126149,'uuid':_0x58b0e5,'tls':_0x4dc35f,'sni':_0x11ddbd,'wsHost':_0x325404,'wsPath':_0x45279a}),(_0x413146==='trojan'||_0x413146===_0x2410f0(0x1e6))&&_0xa0492b[_0x2410f0(0x20d)]({'type':'trojan','name':'['+(_0xa0492b[_0x2410f0(0x1b7)]+0x1)+_0x2410f0(0x171)+_0xdaccab+')\x20'+_0x31fa0e+_0x2410f0(0x197)+(_0x4dc35f?'TLS':_0x2410f0(0x175))+']','server':_0x390fb2,'port':_0x126149,'password':_0x58b0e5,'tls':_0x4dc35f,'sni':_0x11ddbd,'wsHost':_0x325404,'wsPath':_0x45279a}),(_0x413146===_0x2410f0(0x192)||_0x413146===_0x2410f0(0x1e6))&&_0xa0492b[_0x2410f0(0x20d)]({'type':'ss','name':'['+(_0xa0492b[_0x2410f0(0x1b7)]+0x1)+_0x2410f0(0x171)+_0xdaccab+')\x20'+_0x31fa0e+'\x20[SS-'+(_0x4dc35f?'TLS':_0x2410f0(0x175))+']','server':_0x390fb2,'port':_0x126149,'password':_0x58b0e5,'tls':_0x4dc35f,'wsHost':_0x325404,'wsPath':_0x45279a});});});return generateNekoboxConfig(_0xa0492b);default:return'Unsupported\x20format\x20type';}}function _0xb3a3(_0x534596,_0x4ba217){const _0x135089=_0x1350();return _0xb3a3=function(_0xb3a3f9,_0x3f2bab){_0xb3a3f9=_0xb3a3f9-0x163;let _0x14634f=_0x135089[_0xb3a3f9];return _0x14634f;},_0xb3a3(_0x534596,_0x4ba217);}function generateV2rayLinks(_0x144e1d,_0x566c7e,_0xf3000e,_0x4e35a4,_0x4b56ce,_0x294fb6,_0x47f5bc){const _0x300204=_0x3193d6,_0xcbdeea=[];let _0x18dedf=[];return _0x294fb6&&(_0x4e35a4===_0x300204(0x1f6)||_0x4e35a4===_0x300204(0x205))&&(_0x18dedf=_0x294fb6[_0x300204(0x1f9)](',')[_0x300204(0x1ee)](_0x2076de=>_0x2076de[_0x300204(0x25d)]())),_0x566c7e[_0x300204(0x25c)](_0xe79d3f=>{const _0x2981f1=_0x300204,_0x10421b=CONFIG[_0x2981f1(0x1ba)][_0x2981f1(0x177)](_0x2981f1(0x1be),_0xe79d3f['ip'])[_0x2981f1(0x177)]('{port}',_0xe79d3f['port']),_0x1cb88f=_0x47f5bc?0x1bb:0x50,_0x3082e3=_0x47f5bc?'tls':_0x2981f1(0x204);if(_0x144e1d===_0x2981f1(0x1e6)||_0x144e1d===_0x2981f1(0x1ef)){if(_0x18dedf[_0x2981f1(0x1b7)]>0x0)_0x18dedf[_0x2981f1(0x25c)]((_0x323324,_0x1b286b)=>{const _0x471d43=_0x2981f1,_0x5f5a54=_0x323324,_0x5e3947=_0x4e35a4==='wildcard'?_0x323324+'.'+_0x4b56ce:_0x4b56ce,_0x2a2cfc=_0x4e35a4===_0x471d43(0x205)?_0x323324+'.'+_0x4b56ce:_0x4b56ce,_0x146c13={'v':'2','ps':'['+(_0xcbdeea[_0x471d43(0x1b7)]+0x1)+']\x20'+_0xe79d3f[_0x471d43(0x181)]+_0x471d43(0x1cf)+_0xe79d3f[_0x471d43(0x1a6)]+_0x471d43(0x231)+(_0x47f5bc?_0x471d43(0x1af):_0x471d43(0x175))+']','add':_0x5f5a54,'port':_0x1cb88f,'id':_0xf3000e,'aid':'0','net':'ws','type':'none','host':_0x5e3947,'path':_0x10421b,'tls':_0x3082e3,'sni':_0x2a2cfc,'scy':_0x471d43(0x210)};_0xcbdeea[_0x471d43(0x20d)](_0x471d43(0x1c8)+safeBase64Encode(JSON[_0x471d43(0x1ac)](_0x146c13)));});else{const _0x17b1fc={'v':'2','ps':'['+(_0xcbdeea[_0x2981f1(0x1b7)]+0x1)+']\x20'+_0xe79d3f['country']+_0x2981f1(0x1cf)+_0xe79d3f['provider']+_0x2981f1(0x231)+(_0x47f5bc?_0x2981f1(0x1af):_0x2981f1(0x175))+']','add':_0x4b56ce,'port':_0x1cb88f,'id':_0xf3000e,'aid':'0','net':'ws','type':_0x2981f1(0x204),'host':_0x4b56ce,'path':_0x10421b,'tls':_0x3082e3,'sni':_0x4b56ce,'scy':_0x2981f1(0x210)};_0xcbdeea[_0x2981f1(0x20d)](_0x2981f1(0x1c8)+safeBase64Encode(JSON[_0x2981f1(0x1ac)](_0x17b1fc)));}}if(_0x144e1d==='mix'||_0x144e1d===_0x2981f1(0x18b)){if(_0x18dedf[_0x2981f1(0x1b7)]>0x0)_0x18dedf[_0x2981f1(0x25c)](_0x5a417b=>{const _0x10af76=_0x2981f1,_0x2e747b=_0x5a417b,_0xac42ab=_0x4e35a4===_0x10af76(0x205)?_0x5a417b+'.'+_0x4b56ce:_0x4b56ce,_0x5ad414=_0x4e35a4===_0x10af76(0x205)?_0x5a417b+'.'+_0x4b56ce:_0x4b56ce,_0x5c0ce4=encodeURIComponent('['+(_0xcbdeea['length']+0x1)+']\x20'+_0xe79d3f['country']+_0x10af76(0x1cf)+_0xe79d3f[_0x10af76(0x1a6)]+_0x10af76(0x173)+(_0x47f5bc?'TLS':'NTLS')+']'),_0x296565=encodeURIComponent(_0x10421b);_0xcbdeea['push']('vless://'+_0xf3000e+'@'+_0x2e747b+':'+_0x1cb88f+_0x10af76(0x1b2)+_0x3082e3+_0x10af76(0x174)+_0xac42ab+'&path='+_0x296565+_0x10af76(0x261)+_0x5ad414+'#'+_0x5c0ce4);});else{const _0x526b2e=encodeURIComponent('['+(_0xcbdeea['length']+0x1)+']\x20'+_0xe79d3f['country']+'\x20-\x20'+_0xe79d3f[_0x2981f1(0x1a6)]+'\x20[VLESS-'+(_0x47f5bc?_0x2981f1(0x1af):_0x2981f1(0x175))+']'),_0xdad92b=encodeURIComponent(_0x10421b);_0xcbdeea[_0x2981f1(0x20d)](_0x2981f1(0x1c6)+_0xf3000e+'@'+_0x4b56ce+':'+_0x1cb88f+_0x2981f1(0x1b2)+_0x3082e3+_0x2981f1(0x174)+_0x4b56ce+'&path='+_0xdad92b+'&sni='+_0x4b56ce+'#'+_0x526b2e);}}if(_0x144e1d==='mix'||_0x144e1d===_0x2981f1(0x22e)){if(_0x18dedf[_0x2981f1(0x1b7)]>0x0)_0x18dedf[_0x2981f1(0x25c)](_0x343083=>{const _0xae352=_0x2981f1,_0x552afc=_0x343083,_0x28f808=_0x4e35a4===_0xae352(0x205)?_0x343083+'.'+_0x4b56ce:_0x4b56ce,_0x3731a8=_0x4e35a4==='wildcard'?_0x343083+'.'+_0x4b56ce:_0x4b56ce,_0x37c49a=encodeURIComponent('['+(_0xcbdeea['length']+0x1)+']\x20'+_0xe79d3f[_0xae352(0x181)]+'\x20-\x20'+_0xe79d3f[_0xae352(0x1a6)]+_0xae352(0x165)+(_0x47f5bc?'TLS':_0xae352(0x175))+']'),_0x3f9a64=encodeURIComponent(_0x10421b);_0xcbdeea[_0xae352(0x20d)](_0xae352(0x22a)+_0xf3000e+'@'+_0x552afc+':'+_0x1cb88f+'?security='+_0x3082e3+'&type=ws&host='+_0x28f808+_0xae352(0x176)+_0x3f9a64+_0xae352(0x261)+_0x3731a8+'#'+_0x37c49a);});else{const _0x3cf5a3=encodeURIComponent('['+(_0xcbdeea[_0x2981f1(0x1b7)]+0x1)+']\x20'+_0xe79d3f[_0x2981f1(0x181)]+_0x2981f1(0x1cf)+_0xe79d3f[_0x2981f1(0x1a6)]+_0x2981f1(0x165)+(_0x47f5bc?_0x2981f1(0x1af):_0x2981f1(0x175))+']'),_0x4c79aa=encodeURIComponent(_0x10421b);_0xcbdeea['push'](_0x2981f1(0x22a)+_0xf3000e+'@'+_0x4b56ce+':'+_0x1cb88f+_0x2981f1(0x20a)+_0x3082e3+_0x2981f1(0x174)+_0x4b56ce+_0x2981f1(0x176)+_0x4c79aa+'&sni='+_0x4b56ce+'#'+_0x3cf5a3);}}if(_0x144e1d===_0x2981f1(0x1e6)||_0x144e1d==='shadowsocks'){if(_0x18dedf['length']>0x0)_0x18dedf[_0x2981f1(0x25c)](_0x5818d7=>{const _0x19fff2=_0x2981f1,_0x59d351=_0x5818d7,_0x28889f=_0x4e35a4===_0x19fff2(0x205)?_0x5818d7+'.'+_0x4b56ce:_0x4b56ce,_0x1d6426=_0x4e35a4===_0x19fff2(0x205)?_0x5818d7+'.'+_0x4b56ce:_0x4b56ce,_0x3aa355=encodeURIComponent('['+(_0xcbdeea['length']+0x1)+']\x20'+_0xe79d3f['country']+_0x19fff2(0x1cf)+_0xe79d3f[_0x19fff2(0x1a6)]+_0x19fff2(0x1ff)+(_0x47f5bc?'TLS':_0x19fff2(0x175))+']'),_0x148f31=encodeURIComponent(_0x10421b),_0x18ff0e=_0x19fff2(0x204),_0x1c7afe=safeBase64Encode(_0x18ff0e+':'+_0xf3000e);_0xcbdeea[_0x19fff2(0x20d)](_0x19fff2(0x1df)+_0x1c7afe+'@'+_0x59d351+':'+_0x1cb88f+'?encryption=none&type=ws&host='+_0x28889f+'&path='+_0x148f31+_0x19fff2(0x21a)+_0x3082e3+_0x19fff2(0x261)+_0x1d6426+'#'+_0x3aa355);});else{const _0x191727=encodeURIComponent('['+(_0xcbdeea[_0x2981f1(0x1b7)]+0x1)+']\x20'+_0xe79d3f['country']+_0x2981f1(0x1cf)+_0xe79d3f[_0x2981f1(0x1a6)]+_0x2981f1(0x1ff)+(_0x47f5bc?'TLS':_0x2981f1(0x175))+']'),_0x52c581=encodeURIComponent(_0x10421b),_0x1ce2a1=_0x2981f1(0x204),_0xb388ba=safeBase64Encode(_0x1ce2a1+':'+_0xf3000e);_0xcbdeea[_0x2981f1(0x20d)](_0x2981f1(0x1df)+_0xb388ba+'@'+_0x4b56ce+':'+_0x1cb88f+_0x2981f1(0x1e9)+_0x4b56ce+_0x2981f1(0x176)+_0x52c581+_0x2981f1(0x21a)+_0x3082e3+'&sni='+_0x4b56ce+'#'+_0x191727);}}}),_0xcbdeea['join']('\x0a');}function generateClashConfig(_0x24f7c4,_0x3aec23,_0x394999,_0x21a5dc,_0x3b3269,_0x5d9ebc,_0x1d46e3){const _0x2157ba=_0x3193d6;let _0x32383b=_0x2157ba(0x21f)+new Date()[_0x2157ba(0x1a8)](_0x2157ba(0x188),{'timeZone':_0x2157ba(0x1bc)})+_0x2157ba(0x237)+_0x24f7c4['toUpperCase']()+_0x2157ba(0x233)+(_0x1d46e3?_0x2157ba(0x25f):_0x2157ba(0x253))+'\x0a\x0aproxies:\x0a',_0x24c295=[];return _0x5d9ebc&&(_0x21a5dc==='non-wildcard'||_0x21a5dc===_0x2157ba(0x205))&&(_0x24c295=_0x5d9ebc[_0x2157ba(0x1f9)](',')[_0x2157ba(0x1ee)](_0x4269d7=>_0x4269d7[_0x2157ba(0x25d)]())),_0x3aec23[_0x2157ba(0x25c)](_0x5d0941=>{const _0x7b306=_0x2157ba,_0x27a16e=CONFIG[_0x7b306(0x1ba)][_0x7b306(0x177)](_0x7b306(0x1be),_0x5d0941['ip'])[_0x7b306(0x177)](_0x7b306(0x1ca),_0x5d0941[_0x7b306(0x24e)]),_0x595021=_0x1d46e3?0x1bb:0x50,_0x30b7dd=_0x1d46e3;if(_0x24f7c4==='mix'||_0x24f7c4===_0x7b306(0x1ef)){if(_0x24c295[_0x7b306(0x1b7)]>0x0)_0x24c295[_0x7b306(0x25c)]((_0xb96825,_0x58bb7d)=>{const _0x4307ab=_0x7b306,_0x2fb6a1=_0xb96825,_0x266a59=_0x21a5dc===_0x4307ab(0x205)?_0xb96825+'.'+_0x3b3269:_0x3b3269,_0x4a1731=_0x21a5dc===_0x4307ab(0x205)?_0xb96825+'.'+_0x3b3269:_0x3b3269,_0x41ee91='['+(_0x3aec23[_0x4307ab(0x211)](_0x5d0941)*_0x24c295['length']+_0x58bb7d+0x1)+']\x20'+_0x5d0941[_0x4307ab(0x181)]+_0x4307ab(0x1cf)+_0x5d0941[_0x4307ab(0x1a6)]+'\x20[VMess-'+(_0x1d46e3?_0x4307ab(0x1af):'NTLS')+']';_0x32383b+=_0x4307ab(0x18d)+_0x41ee91+'\x22\x0a\x20\x20\x20\x20type:\x20vmess\x0a\x20\x20\x20\x20server:\x20'+_0x2fb6a1+'\x0a\x20\x20\x20\x20port:\x20'+_0x595021+_0x4307ab(0x264)+_0x394999+_0x4307ab(0x224)+_0x30b7dd+_0x4307ab(0x179)+_0x4a1731+_0x4307ab(0x1f2)+_0x27a16e+'\x0a\x20\x20\x20\x20\x20\x20headers:\x0a\x20\x20\x20\x20\x20\x20\x20\x20Host:\x20'+_0x266a59+'\x0a';});else{const _0x548122='['+(_0x3aec23[_0x7b306(0x211)](_0x5d0941)+0x1)+']\x20'+_0x5d0941[_0x7b306(0x181)]+_0x7b306(0x1cf)+_0x5d0941[_0x7b306(0x1a6)]+_0x7b306(0x231)+(_0x1d46e3?_0x7b306(0x1af):_0x7b306(0x175))+']';_0x32383b+=_0x7b306(0x18d)+_0x548122+_0x7b306(0x1e8)+_0x3b3269+_0x7b306(0x23d)+_0x595021+_0x7b306(0x264)+_0x394999+_0x7b306(0x224)+_0x30b7dd+_0x7b306(0x179)+_0x3b3269+'\x0a\x20\x20\x20\x20network:\x20ws\x0a\x20\x20\x20\x20ws-opts:\x0a\x20\x20\x20\x20\x20\x20path:\x20'+_0x27a16e+'\x0a\x20\x20\x20\x20\x20\x20headers:\x0a\x20\x20\x20\x20\x20\x20\x20\x20Host:\x20'+_0x3b3269+'\x0a';}}if(_0x24f7c4===_0x7b306(0x1e6)||_0x24f7c4===_0x7b306(0x18b)){if(_0x24c295[_0x7b306(0x1b7)]>0x0)_0x24c295[_0x7b306(0x25c)]((_0x3b0c6d,_0xfde1d8)=>{const _0x458446=_0x7b306,_0x20604f=_0x3b0c6d,_0x489cee=_0x21a5dc===_0x458446(0x205)?_0x3b0c6d+'.'+_0x3b3269:_0x3b3269,_0x2cc653=_0x21a5dc===_0x458446(0x205)?_0x3b0c6d+'.'+_0x3b3269:_0x3b3269,_0xd874e1='['+(_0x3aec23[_0x458446(0x211)](_0x5d0941)*_0x24c295['length']+_0xfde1d8+0x1)+']\x20'+_0x5d0941['country']+_0x458446(0x1cf)+_0x5d0941['provider']+'\x20[VLESS-'+(_0x1d46e3?_0x458446(0x1af):_0x458446(0x175))+']';_0x32383b+='\x0a\x20\x20-\x20name:\x20\x22'+_0xd874e1+_0x458446(0x265)+_0x20604f+_0x458446(0x23d)+_0x595021+'\x0a\x20\x20\x20\x20uuid:\x20'+_0x394999+_0x458446(0x1f5)+_0x30b7dd+_0x458446(0x179)+_0x2cc653+'\x0a\x20\x20\x20\x20network:\x20ws\x0a\x20\x20\x20\x20ws-opts:\x0a\x20\x20\x20\x20\x20\x20path:\x20'+_0x27a16e+'\x0a\x20\x20\x20\x20\x20\x20headers:\x0a\x20\x20\x20\x20\x20\x20\x20\x20Host:\x20'+_0x489cee+'\x0a';});else{const _0x12f2b6='['+(_0x3aec23[_0x7b306(0x211)](_0x5d0941)+0x1)+']\x20'+_0x5d0941['country']+_0x7b306(0x1cf)+_0x5d0941[_0x7b306(0x1a6)]+_0x7b306(0x173)+(_0x1d46e3?'TLS':_0x7b306(0x175))+']';_0x32383b+='\x0a\x20\x20-\x20name:\x20\x22'+_0x12f2b6+_0x7b306(0x265)+_0x3b3269+_0x7b306(0x23d)+_0x595021+_0x7b306(0x264)+_0x394999+_0x7b306(0x1f5)+_0x30b7dd+_0x7b306(0x179)+_0x3b3269+_0x7b306(0x1f2)+_0x27a16e+_0x7b306(0x1ec)+_0x3b3269+'\x0a';}}if(_0x24f7c4===_0x7b306(0x1e6)||_0x24f7c4===_0x7b306(0x22e)){if(_0x24c295[_0x7b306(0x1b7)]>0x0)_0x24c295[_0x7b306(0x25c)]((_0x4f7e22,_0x5bc035)=>{const _0x82b78=_0x7b306,_0x2e4e9d=_0x4f7e22,_0x44851d=_0x21a5dc===_0x82b78(0x205)?_0x4f7e22+'.'+_0x3b3269:_0x3b3269,_0x15d141=_0x21a5dc==='wildcard'?_0x4f7e22+'.'+_0x3b3269:_0x3b3269,_0x579577='['+(_0x3aec23[_0x82b78(0x211)](_0x5d0941)*_0x24c295[_0x82b78(0x1b7)]+_0x5bc035+0x1)+']\x20'+_0x5d0941[_0x82b78(0x181)]+_0x82b78(0x1cf)+_0x5d0941[_0x82b78(0x1a6)]+_0x82b78(0x165)+(_0x1d46e3?_0x82b78(0x1af):_0x82b78(0x175))+']';_0x32383b+=_0x82b78(0x18d)+_0x579577+_0x82b78(0x1cd)+_0x2e4e9d+_0x82b78(0x23d)+_0x595021+_0x82b78(0x1d9)+_0x394999+_0x82b78(0x259)+_0x15d141+_0x82b78(0x1c9)+_0x27a16e+_0x82b78(0x1ec)+_0x44851d+'\x0a';});else{const _0x5c488c='['+(_0x3aec23[_0x7b306(0x211)](_0x5d0941)+0x1)+']\x20'+_0x5d0941['country']+_0x7b306(0x1cf)+_0x5d0941['provider']+_0x7b306(0x165)+(_0x1d46e3?'TLS':'NTLS')+']';_0x32383b+='\x0a\x20\x20-\x20name:\x20\x22'+_0x5c488c+_0x7b306(0x1cd)+_0x3b3269+'\x0a\x20\x20\x20\x20port:\x20'+_0x595021+_0x7b306(0x1d9)+_0x394999+_0x7b306(0x259)+_0x3b3269+'\x0a\x20\x20\x20\x20skip-cert-verify:\x20true\x0a\x20\x20\x20\x20network:\x20ws\x0a\x20\x20\x20\x20ws-opts:\x0a\x20\x20\x20\x20\x20\x20path:\x20'+_0x27a16e+'\x0a\x20\x20\x20\x20\x20\x20headers:\x0a\x20\x20\x20\x20\x20\x20\x20\x20Host:\x20'+_0x3b3269+'\x0a';}}if(_0x24f7c4==='mix'||_0x24f7c4==='shadowsocks'){if(_0x24c295[_0x7b306(0x1b7)]>0x0)_0x24c295[_0x7b306(0x25c)]((_0xfc25ff,_0x3fbbb5)=>{const _0x2cf49b=_0x7b306,_0x1976ca=_0xfc25ff,_0x154cf9=_0x21a5dc===_0x2cf49b(0x205)?_0xfc25ff+'.'+_0x3b3269:_0x3b3269,_0x57cd76=_0x21a5dc===_0x2cf49b(0x205)?_0xfc25ff+'.'+_0x3b3269:_0x3b3269,_0x4daa13='['+(_0x3aec23[_0x2cf49b(0x211)](_0x5d0941)*_0x24c295[_0x2cf49b(0x1b7)]+_0x3fbbb5+0x1)+']\x20'+_0x5d0941[_0x2cf49b(0x181)]+_0x2cf49b(0x1cf)+_0x5d0941[_0x2cf49b(0x1a6)]+_0x2cf49b(0x1ff)+(_0x1d46e3?_0x2cf49b(0x1af):_0x2cf49b(0x175))+']';_0x32383b+=_0x2cf49b(0x18d)+_0x4daa13+_0x2cf49b(0x1fc)+_0x1976ca+_0x2cf49b(0x23d)+_0x595021+_0x2cf49b(0x180)+_0x394999+_0x2cf49b(0x1a4)+_0x30b7dd+_0x2cf49b(0x1a0)+_0x154cf9+_0x2cf49b(0x255)+_0x27a16e+_0x2cf49b(0x17d);});else{const _0xa2b835='['+(_0x3aec23[_0x7b306(0x211)](_0x5d0941)+0x1)+']\x20'+_0x5d0941[_0x7b306(0x181)]+_0x7b306(0x1cf)+_0x5d0941[_0x7b306(0x1a6)]+_0x7b306(0x1ff)+(_0x1d46e3?_0x7b306(0x1af):_0x7b306(0x175))+']';_0x32383b+=_0x7b306(0x18d)+_0xa2b835+_0x7b306(0x1fc)+_0x3b3269+_0x7b306(0x23d)+_0x595021+_0x7b306(0x180)+_0x394999+_0x7b306(0x1a4)+_0x30b7dd+_0x7b306(0x1a0)+_0x3b3269+_0x7b306(0x255)+_0x27a16e+_0x7b306(0x17d);}}}),_0x32383b;}function generateNekoboxConfig(_0x576b23){const _0x2ff744=_0x3193d6;let _0x29b4f9=_0x2ff744(0x178);const _0x4bec57=_0x576b23[_0x2ff744(0x1ee)](_0x498e58=>_0x2ff744(0x203)+_0x498e58['name']+'\x22,')[_0x2ff744(0x1db)]('\x0a');_0x29b4f9+=_0x4bec57+'\x0a',_0x29b4f9+=_0x2ff744(0x23f),_0x29b4f9+=_0x4bec57+'\x0a',_0x29b4f9+=_0x2ff744(0x236);const _0x4e4fe3=_0x576b23[_0x2ff744(0x1ee)]((_0x4fcffd,_0x5cc0bd)=>{const _0x551c4f=_0x2ff744;let _0x32a6e0='';if(_0x4fcffd[_0x551c4f(0x1fd)]===_0x551c4f(0x1ef))_0x32a6e0='\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x22alter_id\x22:\x200,\x0a\x20\x20\x20\x20\x20\x20\x22packet_encoding\x22:\x20\x22\x22,\x0a\x20\x20\x20\x20\x20\x20\x22security\x22:\x20\x22zero\x22,\x0a\x20\x20\x20\x20\x20\x20\x22server\x22:\x20\x22'+_0x4fcffd[_0x551c4f(0x164)]+'\x22,\x0a\x20\x20\x20\x20\x20\x20\x22server_port\x22:\x20'+_0x4fcffd['port']+','+(_0x4fcffd[_0x551c4f(0x186)]?_0x551c4f(0x24a)+(_0x4fcffd[_0x551c4f(0x252)]||_0x4fcffd[_0x551c4f(0x164)])+_0x551c4f(0x1c0):'')+_0x551c4f(0x262)+(_0x4fcffd[_0x551c4f(0x258)]||_0x4fcffd['server'])+_0x551c4f(0x194)+_0x4fcffd['wsPath']+'\x22,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22type\x22:\x20\x22ws\x22\x0a\x20\x20\x20\x20\x20\x20},\x0a\x20\x20\x20\x20\x20\x20\x22uuid\x22:\x20\x22'+_0x4fcffd[_0x551c4f(0x228)]+'\x22,\x0a\x20\x20\x20\x20\x20\x20\x22type\x22:\x20\x22vmess\x22,\x0a\x20\x20\x20\x20\x20\x20\x22domain_strategy\x22:\x20\x22prefer_ipv4\x22,\x0a\x20\x20\x20\x20\x20\x20\x22tag\x22:\x20\x22'+_0x4fcffd[_0x551c4f(0x182)]+_0x551c4f(0x218);else{if(_0x4fcffd[_0x551c4f(0x1fd)]===_0x551c4f(0x18b))_0x32a6e0=_0x551c4f(0x1de)+_0x4fcffd[_0x551c4f(0x164)]+_0x551c4f(0x25b)+_0x4fcffd[_0x551c4f(0x24e)]+',\x0a\x20\x20\x20\x20\x20\x20\x22tag\x22:\x20\x22'+_0x4fcffd[_0x551c4f(0x182)]+'\x22,'+(_0x4fcffd[_0x551c4f(0x186)]?_0x551c4f(0x24a)+(_0x4fcffd[_0x551c4f(0x252)]||_0x4fcffd[_0x551c4f(0x164)])+_0x551c4f(0x1c0):'')+'\x0a\x20\x20\x20\x20\x20\x20\x22transport\x22:\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22early_data_header_name\x22:\x20\x22Sec-WebSocket-Protocol\x22,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22headers\x22:\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x22Host\x22:\x20\x22'+(_0x4fcffd[_0x551c4f(0x258)]||_0x4fcffd[_0x551c4f(0x164)])+_0x551c4f(0x24d)+_0x4fcffd[_0x551c4f(0x1ab)]+_0x551c4f(0x1dd)+_0x4fcffd[_0x551c4f(0x228)]+'\x22\x0a\x20\x20\x20\x20}';else{if(_0x4fcffd[_0x551c4f(0x1fd)]===_0x551c4f(0x22e))_0x32a6e0=_0x551c4f(0x247)+_0x4fcffd[_0x551c4f(0x1c5)]+_0x551c4f(0x1d3)+_0x4fcffd[_0x551c4f(0x164)]+_0x551c4f(0x25b)+_0x4fcffd[_0x551c4f(0x24e)]+_0x551c4f(0x209)+_0x4fcffd[_0x551c4f(0x182)]+'\x22,'+(_0x4fcffd[_0x551c4f(0x186)]?_0x551c4f(0x24a)+(_0x4fcffd[_0x551c4f(0x252)]||_0x4fcffd[_0x551c4f(0x164)])+_0x551c4f(0x1c0):'')+'\x0a\x20\x20\x20\x20\x20\x20\x22transport\x22:\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22early_data_header_name\x22:\x20\x22Sec-WebSocket-Protocol\x22,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22headers\x22:\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x22Host\x22:\x20\x22'+(_0x4fcffd['wsHost']||_0x4fcffd[_0x551c4f(0x164)])+_0x551c4f(0x24d)+_0x4fcffd[_0x551c4f(0x1ab)]+_0x551c4f(0x16a);else _0x4fcffd[_0x551c4f(0x1fd)]==='ss'&&(_0x32a6e0=_0x551c4f(0x1b6)+_0x4fcffd[_0x551c4f(0x182)]+'\x22,\x0a\x20\x20\x20\x20\x20\x20\x22server\x22:\x20\x22'+_0x4fcffd[_0x551c4f(0x164)]+_0x551c4f(0x25b)+_0x4fcffd[_0x551c4f(0x24e)]+_0x551c4f(0x1f4)+_0x4fcffd[_0x551c4f(0x1c5)]+_0x551c4f(0x242)+_0x4fcffd[_0x551c4f(0x1ab)]+_0x551c4f(0x222)+(_0x4fcffd[_0x551c4f(0x258)]||_0x4fcffd['server'])+_0x551c4f(0x257)+(_0x4fcffd[_0x551c4f(0x186)]?'1':'0')+'\x22\x0a\x20\x20\x20\x20}');}}return _0x32a6e0;})[_0x2ff744(0x1db)](',\x0a');return _0x29b4f9+=_0x4e4fe3,_0x29b4f9+=',\x0a\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x22tag\x22:\x20\x22direct\x22,\x0a\x20\x20\x20\x20\x20\x20\x22type\x22:\x20\x22direct\x22\x0a\x20\x20\x20\x20},\x0a\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x22tag\x22:\x20\x22bypass\x22,\x0a\x20\x20\x20\x20\x20\x20\x22type\x22:\x20\x22direct\x22\x0a\x20\x20\x20\x20},\x0a\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x22tag\x22:\x20\x22block\x22,\x0a\x20\x20\x20\x20\x20\x20\x22type\x22:\x20\x22block\x22\x0a\x20\x20\x20\x20},\x0a\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x22tag\x22:\x20\x22dns-out\x22,\x0a\x20\x20\x20\x20\x20\x20\x22type\x22:\x20\x22dns\x22\x0a\x20\x20\x20\x20}\x0a\x20\x20],\x0a\x20\x20\x22route\x22:\x20{\x0a\x20\x20\x20\x20\x22auto_detect_interface\x22:\x20true,\x0a\x20\x20\x20\x20\x22rules\x22:\x20[\x0a\x20\x20\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22outbound\x22:\x20\x22dns-out\x22,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22port\x22:\x20[\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2053\x0a\x20\x20\x20\x20\x20\x20\x20\x20]\x0a\x20\x20\x20\x20\x20\x20},\x0a\x20\x20\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22inbound\x22:\x20[\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x22dns-in\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20],\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22outbound\x22:\x20\x22dns-out\x22\x0a\x20\x20\x20\x20\x20\x20},\x0a\x20\x20\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22network\x22:\x20[\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x22udp\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20],\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22outbound\x22:\x20\x22block\x22,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22port\x22:\x20[\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20443\x0a\x20\x20\x20\x20\x20\x20\x20\x20],\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22port_range\x22:\x20[]\x0a\x20\x20\x20\x20\x20\x20},\x0a\x20\x20\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22ip_cidr\x22:\x20[\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x22224.0.0.0/3\x22,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x22ff00::/8\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20],\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22outbound\x22:\x20\x22block\x22,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22source_ip_cidr\x22:\x20[\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x22224.0.0.0/3\x22,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x22ff00::/8\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20]\x0a\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20]\x0a\x20\x20}\x0a}',_0x29b4f9;}function showLoading(_0x49186e){const _0x359c0a=_0x3193d6;loadingElement[_0x359c0a(0x243)][_0x359c0a(0x263)]=_0x359c0a(0x1e5),loadingElement[_0x359c0a(0x1e0)](_0x359c0a(0x189))[_0x359c0a(0x16e)]=_0x49186e,resultElement['style']['display']=_0x359c0a(0x204),validationStatusElement[_0x359c0a(0x243)]['display']='none';}function hideLoading(){const _0x54c7cb=_0x3193d6;loadingElement[_0x54c7cb(0x243)][_0x54c7cb(0x263)]=_0x54c7cb(0x204);}function showError(_0x1a8a85){const _0x6b5a0b=_0x3193d6;errorMessageElement[_0x6b5a0b(0x16e)]=_0x1a8a85,errorMessageElement[_0x6b5a0b(0x243)]['display']=_0x6b5a0b(0x1e5);}function showResult(_0x4d1164){const _0x47b9e7=_0x3193d6;hideLoading(),validationStatusElement['style'][_0x47b9e7(0x263)]=_0x47b9e7(0x204),outputElement['value']=_0x4d1164,resultElement[_0x47b9e7(0x243)][_0x47b9e7(0x263)]='block',resultElement[_0x47b9e7(0x166)]({'behavior':'smooth'});}function shuffleArray(_0x3531e1){const _0x2ee864=_0x3193d6;for(let _0x2915be=_0x3531e1[_0x2ee864(0x1b7)]-0x1;_0x2915be>0x0;_0x2915be--){const _0x3899eb=Math[_0x2ee864(0x249)](Math[_0x2ee864(0x221)]()*(_0x2915be+0x1));[_0x3531e1[_0x2915be],_0x3531e1[_0x3899eb]]=[_0x3531e1[_0x3899eb],_0x3531e1[_0x2915be]];}return _0x3531e1;}document[_0x3193d6(0x22b)](_0x3193d6(0x216),()=>{const _0x3225fd=_0x3193d6,_0x1d63f7=document['querySelectorAll'](_0x3225fd(0x235)),_0x30b57f=new Date()[_0x3225fd(0x1a1)]();_0x1d63f7['forEach'](_0x95346b=>{const _0x203ca8=_0x3225fd;_0x95346b[_0x203ca8(0x16e)]=_0x30b57f;});}),document['addEventListener'](_0x3193d6(0x216),()=>{const _0x593621=_0x3193d6,_0x41b556=document[_0x593621(0x183)]('donation-button'),_0x13539c=document[_0x593621(0x183)](_0x593621(0x220)),_0x2c1807=document[_0x593621(0x183)](_0x593621(0x196)),_0x36a77a=document[_0x593621(0x183)](_0x593621(0x1fb));_0x41b556&&_0x13539c&&(_0x41b556[_0x593621(0x22b)](_0x593621(0x21d),()=>{const _0x43ba5d=_0x593621;_0x13539c['classList'][_0x43ba5d(0x1f0)]('active');}),_0x2c1807&&_0x2c1807[_0x593621(0x22b)]('click',()=>{const _0x30c89c=_0x593621;_0x13539c[_0x30c89c(0x227)][_0x30c89c(0x202)]('active');}),_0x36a77a&&_0x36a77a[_0x593621(0x22b)](_0x593621(0x21d),()=>{const _0x6ec831=_0x593621;_0x13539c[_0x6ec831(0x227)][_0x6ec831(0x202)]('active');}),document[_0x593621(0x22b)](_0x593621(0x207),_0x19456c=>{const _0x3154f4=_0x593621;_0x19456c[_0x3154f4(0x20e)]==='Escape'&&_0x13539c[_0x3154f4(0x227)]['contains']('active')&&_0x13539c[_0x3154f4(0x227)]['remove'](_0x3154f4(0x21e));}));});function generateUUIDv4(){const _0x58052e=_0x3193d6;return _0x58052e(0x167)[_0x58052e(0x177)](/[xy]/g,_0x20250e=>{const _0x1aa74a=_0x58052e,_0x3a014e=Math[_0x1aa74a(0x221)]()*0x10|0x0,_0x4cdbf5=_0x20250e==='x'?_0x3a014e:_0x3a014e&0x3|0x8;return _0x4cdbf5[_0x1aa74a(0x223)](0x10);});}function safeBase64Encode(_0x3530ad){const _0xa95c7a=_0x3193d6;try{const _0x3604e1=typeof _0x3530ad===_0xa95c7a(0x19b)?JSON[_0xa95c7a(0x1ac)](_0x3530ad):String(_0x3530ad);return window['btoa'](_0x3604e1);}catch(_0xd2e3a7){return console[_0xa95c7a(0x198)](_0xa95c7a(0x19d),_0xd2e3a7),'';}}function formatDate(_0x426e15){const _0x14dbb2=_0x3193d6,_0x1c4d25={'year':_0x14dbb2(0x172),'month':_0x14dbb2(0x206),'day':_0x14dbb2(0x172),'hour':_0x14dbb2(0x1cc),'minute':_0x14dbb2(0x1cc)};return _0x426e15['toLocaleDateString']('en-US',_0x1c4d25);}function _0x1350(){const _0x3cbe0b=['{ip}','catch','\x22,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22utls\x22:\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x22enabled\x22:\x20true,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x22fingerprint\x22:\x20\x22randomized\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20},','top','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20style=\x22color:\x20white;\x22>','<i\x20class=\x22fas\x20fa-info-circle\x22></i>','maxProxies','password','vless://','innerHTML','vmess://','\x0a\x20\x20\x20\x20skip-cert-verify:\x20true\x0a\x20\x20\x20\x20network:\x20ws\x0a\x20\x20\x20\x20ws-opts:\x0a\x20\x20\x20\x20\x20\x20path:\x20','{port}','bugType','2-digit','\x22\x0a\x20\x20\x20\x20type:\x20trojan\x0a\x20\x20\x20\x20server:\x20','validation-status','\x20-\x20','Fetching\x20proxy\x20list...','preventDefault','copyLink','\x22,\x0a\x20\x20\x20\x20\x20\x20\x22server\x22:\x20\x22','&port=','customBug','value','animation','result','\x0a\x20\x20\x20\x20password:\x20','?ip=','join','Generating\x20configuration...','\x22,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22type\x22:\x20\x22ws\x22\x0a\x20\x20\x20\x20\x20\x20},\x0a\x20\x20\x20\x20\x20\x20\x22type\x22:\x20\x22vless\x22,\x0a\x20\x20\x20\x20\x20\x20\x22uuid\x22:\x20\x22','\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x22domain_strategy\x22:\x20\x22ipv4_only\x22,\x0a\x20\x20\x20\x20\x20\x20\x22flow\x22:\x20\x22\x22,\x0a\x20\x20\x20\x20\x20\x20\x22multiplex\x22:\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22enabled\x22:\x20false,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22max_streams\x22:\x2032,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22protocol\x22:\x20\x22smux\x22\x0a\x20\x20\x20\x20\x20\x20},\x0a\x20\x20\x20\x20\x20\x20\x22packet_encoding\x22:\x20\x22xudp\x22,\x0a\x20\x20\x20\x20\x20\x20\x22server\x22:\x20\x22','ss://','querySelector','4283778hEAksQ','20px','formatType','toast-styles','block','mix','then','\x22\x0a\x20\x20\x20\x20type:\x20vmess\x0a\x20\x20\x20\x20server:\x20','?encryption=none&type=ws&host=','2536ylrVjh','Failed\x20to\x20fetch\x20proxy\x20list','\x0a\x20\x20\x20\x20\x20\x20headers:\x0a\x20\x20\x20\x20\x20\x20\x20\x20Host:\x20','apiCheckUrl','map','vmess','add','all','\x0a\x20\x20\x20\x20network:\x20ws\x0a\x20\x20\x20\x20ws-opts:\x0a\x20\x20\x20\x20\x20\x20path:\x20','afrcloud.my.id',',\x0a\x20\x20\x20\x20\x20\x20\x22method\x22:\x20\x22none\x22,\x0a\x20\x20\x20\x20\x20\x20\x22password\x22:\x20\x22','\x0a\x20\x20\x20\x20udp:\x20false\x0a\x20\x20\x20\x20tls:\x20','non-wildcard','body','copy','split','Unknown','donation-backdrop','\x22\x0a\x20\x20\x20\x20type:\x20ss\x0a\x20\x20\x20\x20server:\x20','type','2723260UCaUVV','\x20[SS-','No\x20proxies\x20found\x20in\x20the\x20proxy\x20list.','default','remove','\x20\x20\x20\x20\x20\x20\x20\x20\x22','none','wildcard','short','keydown','slice',',\x0a\x20\x20\x20\x20\x20\x20\x22tag\x22:\x20\x22','?security=','18819LwPlVI','min','push','key','-999999px','zero','indexOf','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<svg\x20class=\x22copy-icon\x22\x20xmlns=\x22http://www.w3.org/2000/svg\x22\x20viewBox=\x220\x200\x2024\x2024\x22\x20fill=\x22none\x22\x20stroke=\x22currentColor\x22\x20stroke-width=\x222\x22\x20stroke-linecap=\x22round\x22\x20stroke-linejoin=\x22round\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<polyline\x20points=\x2220\x206\x209\x2017\x204\x2012\x22></polyline>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</svg>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20COPIED\x20SUCCESSFULLY\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','<i\x20class=\x22fas\x20fa-check-circle\x22></i>','Error\x20validating\x20proxy:','submit','DOMContentLoaded','bbbbbbbb-cccc-4ddd-eeee-ffffffffffff','\x22\x0a\x20\x20\x20\x20}','toast\x20toast-','&security=','loading','option','click','active','#\x20Clash\x20Proxy\x20Provider\x20Configuration\x0a#\x20Generated\x20by\x20Inconigto-Mode\x0a#\x20Date:\x20','donation-modal','random',';host=','toString','\x0a\x20\x20\x20\x20alterId:\x200\x0a\x20\x20\x20\x20cipher:\x20zero\x0a\x20\x20\x20\x20udp:\x20false\x0a\x20\x20\x20\x20tls:\x20','https://raw.githubusercontent.com/InconigtoMode/proxylist/refs/heads/main/all.txt','afrcloud.web.id','classList','uuid','className','trojan://','addEventListener','rgba(99,\x20102,\x20241,\x200.9)','subLinkForm','trojan','v2ray','14CCdqGS','\x20[VMess-','9999','\x0a#\x20TLS:\x20','right','#current-year','\x20\x20\x20\x20\x20\x20\x20\x20\x22direct\x22\x0a\x20\x20\x20\x20\x20\x20],\x0a\x20\x20\x20\x20\x20\x20\x22tag\x22:\x20\x22Best\x20Latency\x22,\x0a\x20\x20\x20\x20\x20\x20\x22type\x22:\x20\x22urltest\x22,\x0a\x20\x20\x20\x20\x20\x20\x22url\x22:\x20\x22https://detectportal.firefox.com/success.txt\x22\x0a\x20\x20\x20\x20},\x0a','\x0a#\x20Protocol:\x20','Error\x20loading\x20proxy\x20list:','\x20[VMESS-','generateUuid','checked','Failed\x20to\x20load\x20proxy\x20list.\x20Please\x20try\x20again\x20later.','\x0a\x20\x20\x20\x20port:\x20','clipboard','\x20\x20\x20\x20\x20\x20\x20\x20\x22direct\x22\x0a\x20\x20\x20\x20\x20\x20],\x0a\x20\x20\x20\x20\x20\x20\x22tag\x22:\x20\x22Internet\x22,\x0a\x20\x20\x20\x20\x20\x20\x22type\x22:\x20\x22selector\x22\x0a\x20\x20\x20\x20},\x0a\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x22interval\x22:\x20\x221m0s\x22,\x0a\x20\x20\x20\x20\x20\x20\x22outbounds\x22:\x20[\x0a','ceil','execCommand','\x22,\x0a\x20\x20\x20\x20\x20\x20\x22plugin\x22:\x20\x22v2ray-plugin\x22,\x0a\x20\x20\x20\x20\x20\x20\x22plugin_opts\x22:\x20\x22mux=0;path=','style','Error\x20encoding\x20base64:','\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22display:\x20flex;\x20align-items:\x20center;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20style=\x22margin-right:\x2010px;\x20font-size:\x2018px;\x22>','fixed','\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x22domain_strategy\x22:\x20\x22ipv4_only\x22,\x0a\x20\x20\x20\x20\x20\x20\x22multiplex\x22:\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22enabled\x22:\x20false,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22max_streams\x22:\x2032,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22protocol\x22:\x20\x22smux\x22\x0a\x20\x20\x20\x20\x20\x20},\x0a\x20\x20\x20\x20\x20\x20\x22password\x22:\x20\x22','filter','floor','\x0a\x20\x20\x20\x20\x20\x20\x22tls\x22:\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22enabled\x22:\x20true,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22insecure\x22:\x20false,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22server_name\x22:\x20\x22','removeChild','https://apicek.t-me-inconigto.workers.dev/proxy','\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20},\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22max_early_data\x22:\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22path\x22:\x20\x22','port','s\x20forwards','afrcloud.site','sort','sni','Disabled','select','\x0a\x20\x20\x20\x20\x20\x20path:\x20','Proxy\x20count\x20must\x20be\x20between\x201\x20and\x20',';tls=','wsHost','\x0a\x20\x20\x20\x20udp:\x20false\x0a\x20\x20\x20\x20sni:\x20','No\x20proxies\x20found\x20with\x20the\x20selected\x20criteria.','\x22,\x0a\x20\x20\x20\x20\x20\x20\x22server_port\x22:\x20','forEach','trim','toast-container','Enabled','clash','&sni=','\x0a\x20\x20\x20\x20\x20\x20\x22transport\x22:\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22headers\x22:\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x22Host\x22:\x20\x22','display','\x0a\x20\x20\x20\x20uuid:\x20','\x22\x0a\x20\x20\x20\x20type:\x20vless\x0a\x20\x20\x20\x20server:\x20','customBugContainer','server','\x20[Trojan-','scrollIntoView','xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx','padding','output','\x22,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22type\x22:\x20\x22ws\x22\x0a\x20\x20\x20\x20\x20\x20},\x0a\x20\x20\x20\x20\x20\x20\x22type\x22:\x20\x22trojan\x22\x0a\x20\x20\x20\x20}','mainDomain','22107130SfqUMt','div','textContent','19818LydUSf','position',']\x20(','numeric','\x20[VLESS-','&type=ws&host=','NTLS','&path=','replace','##INCONIGTO-MODE##\x0a{\x0a\x20\x20\x22dns\x22:\x20{\x0a\x20\x20\x20\x20\x22final\x22:\x20\x22dns-final\x22,\x0a\x20\x20\x20\x20\x22independent_cache\x22:\x20true,\x0a\x20\x20\x20\x20\x22rules\x22:\x20[\x0a\x20\x20\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22disable_cache\x22:\x20false,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22domain\x22:\x20[\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x22family.cloudflare-dns.com\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20],\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22server\x22:\x20\x22direct-dns\x22\x0a\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20],\x0a\x20\x20\x20\x20\x22servers\x22:\x20[\x0a\x20\x20\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22address\x22:\x20\x22https://family.cloudflare-dns.com/dns-query\x22,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22address_resolver\x22:\x20\x22direct-dns\x22,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22strategy\x22:\x20\x22ipv4_only\x22,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22tag\x22:\x20\x22remote-dns\x22\x0a\x20\x20\x20\x20\x20\x20},\x0a\x20\x20\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22address\x22:\x20\x22local\x22,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22strategy\x22:\x20\x22ipv4_only\x22,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22tag\x22:\x20\x22direct-dns\x22\x0a\x20\x20\x20\x20\x20\x20},\x0a\x20\x20\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22address\x22:\x20\x22local\x22,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22address_resolver\x22:\x20\x22dns-local\x22,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22strategy\x22:\x20\x22ipv4_only\x22,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22tag\x22:\x20\x22dns-final\x22\x0a\x20\x20\x20\x20\x20\x20},\x0a\x20\x20\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22address\x22:\x20\x22local\x22,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22tag\x22:\x20\x22dns-local\x22\x0a\x20\x20\x20\x20\x20\x20},\x0a\x20\x20\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22address\x22:\x20\x22rcode://success\x22,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22tag\x22:\x20\x22dns-block\x22\x0a\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20]\x0a\x20\x20},\x0a\x20\x20\x22experimental\x22:\x20{\x0a\x20\x20\x20\x20\x22cache_file\x22:\x20{\x0a\x20\x20\x20\x20\x20\x20\x22enabled\x22:\x20true,\x0a\x20\x20\x20\x20\x20\x20\x22path\x22:\x20\x22../cache/clash.db\x22,\x0a\x20\x20\x20\x20\x20\x20\x22store_fakeip\x22:\x20true\x0a\x20\x20\x20\x20},\x0a\x20\x20\x20\x20\x22clash_api\x22:\x20{\x0a\x20\x20\x20\x20\x20\x20\x22external_controller\x22:\x20\x22127.0.0.1:9090\x22,\x0a\x20\x20\x20\x20\x20\x20\x22external_ui\x22:\x20\x22../files/yacd\x22\x0a\x20\x20\x20\x20}\x0a\x20\x20},\x0a\x20\x20\x22inbounds\x22:\x20[\x0a\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x22listen\x22:\x20\x220.0.0.0\x22,\x0a\x20\x20\x20\x20\x20\x20\x22listen_port\x22:\x206450,\x0a\x20\x20\x20\x20\x20\x20\x22override_address\x22:\x20\x228.8.8.8\x22,\x0a\x20\x20\x20\x20\x20\x20\x22override_port\x22:\x2053,\x0a\x20\x20\x20\x20\x20\x20\x22tag\x22:\x20\x22dns-in\x22,\x0a\x20\x20\x20\x20\x20\x20\x22type\x22:\x20\x22direct\x22\x0a\x20\x20\x20\x20},\x0a\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x22domain_strategy\x22:\x20\x22\x22,\x0a\x20\x20\x20\x20\x20\x20\x22endpoint_independent_nat\x22:\x20true,\x0a\x20\x20\x20\x20\x20\x20\x22inet4_address\x22:\x20[\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22172.19.0.1/28\x22\x0a\x20\x20\x20\x20\x20\x20],\x0a\x20\x20\x20\x20\x20\x20\x22mtu\x22:\x209000,\x0a\x20\x20\x20\x20\x20\x20\x22sniff\x22:\x20true,\x0a\x20\x20\x20\x20\x20\x20\x22sniff_override_destination\x22:\x20true,\x0a\x20\x20\x20\x20\x20\x20\x22stack\x22:\x20\x22system\x22,\x0a\x20\x20\x20\x20\x20\x20\x22tag\x22:\x20\x22tun-in\x22,\x0a\x20\x20\x20\x20\x20\x20\x22type\x22:\x20\x22tun\x22\x0a\x20\x20\x20\x20},\x0a\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x22domain_strategy\x22:\x20\x22\x22,\x0a\x20\x20\x20\x20\x20\x20\x22listen\x22:\x20\x220.0.0.0\x22,\x0a\x20\x20\x20\x20\x20\x20\x22listen_port\x22:\x202080,\x0a\x20\x20\x20\x20\x20\x20\x22sniff\x22:\x20true,\x0a\x20\x20\x20\x20\x20\x20\x22sniff_override_destination\x22:\x20true,\x0a\x20\x20\x20\x20\x20\x20\x22tag\x22:\x20\x22mixed-in\x22,\x0a\x20\x20\x20\x20\x20\x20\x22type\x22:\x20\x22mixed\x22\x0a\x20\x20\x20\x20}\x0a\x20\x20],\x0a\x20\x20\x22log\x22:\x20{\x0a\x20\x20\x20\x20\x22level\x22:\x20\x22info\x22\x0a\x20\x20},\x0a\x20\x20\x22outbounds\x22:\x20[\x0a\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x22outbounds\x22:\x20[\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22Best\x20Latency\x22,\x0a','\x0a\x20\x20\x20\x20skip-cert-verify:\x20true\x0a\x20\x20\x20\x20servername:\x20','true','backgroundColor','validation-bar','\x0a\x20\x20\x20\x20\x20\x20mux:\x20false\x0a','head','<i\x20class=\x22fas\x20fa-exclamation-circle\x22></i>','\x0a\x20\x20\x20\x20cipher:\x20none\x0a\x20\x20\x20\x20password:\x20','country','name','getElementById','parseInt','Please\x20enter\x20a\x20UUID.','tls','5839300MBlKkC','en-US','.loading-text','1453588aanAXG','vless','contains','\x0a\x20\x20-\x20name:\x20\x22','includes','24FZSFur','info','width','shadowsocks','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<button\x20style=\x22background:\x20none;\x20border:\x20none;\x20color:\x20white;\x20cursor:\x20pointer;\x20font-size:\x2016px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22fas\x20fa-times\x22></i>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</button>\x0a\x20\x20\x20\x20','\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20},\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x22path\x22:\x20\x22','center','close-donation','\x20[TROJAN-','error','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<svg\x20class=\x22copy-icon\x22\x20xmlns=\x22http://www.w3.org/2000/svg\x22\x20viewBox=\x220\x200\x2024\x2024\x22\x20fill=\x22none\x22\x20stroke=\x22currentColor\x22\x20stroke-width=\x222\x22\x20stroke-linecap=\x22round\x22\x20stroke-linejoin=\x22round\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<rect\x20x=\x229\x22\x20y=\x229\x22\x20width=\x2213\x22\x20height=\x2213\x22\x20rx=\x222\x22\x20ry=\x222\x22></rect>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<path\x20d=\x22M5\x2015H4a2\x202\x200\x200\x201-2-2V4a2\x202\x200\x200\x201\x202-2h9a2\x202\x200\x200\x201\x202\x202v1\x22></path>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</svg>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20COPY\x20CONFIGURATION\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','250px','object','textarea','Base64\x20encoding\x20error:','proxyip','valid-count','\x0a\x20\x20\x20\x20\x20\x20skip-cert-verify:\x20true\x0a\x20\x20\x20\x20\x20\x20host:\x20','getFullYear','Unknown\x20Provider','error-message','\x0a\x20\x20\x20\x20udp:\x20false\x0a\x20\x20\x20\x20plugin:\x20v2ray-plugin\x0a\x20\x20\x20\x20plugin-opts:\x0a\x20\x20\x20\x20\x20\x20mode:\x20websocket\x0a\x20\x20\x20\x20\x20\x20tls:\x20','change','provider','invalid-count','toLocaleString','fadeIn\x200.3s,\x20fadeOut\x200.3s\x20','zIndex','wsPath','stringify','0\x204px\x2012px\x20rgba(0,\x200,\x200,\x200.15)','createElement','TLS','All\x20Countries','minWidth','?encryption=none&security=','writeText','text','appendChild','\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x22type\x22:\x20\x22shadowsocks\x22,\x0a\x20\x20\x20\x20\x20\x20\x22tag\x22:\x20\x22','length','8px','validateProxies','pathTemplate','json','Asia/Jakarta','boxShadow'];_0x1350=function(){return _0x3cbe0b;};return _0x1350();}async function copyToClipboard(_0x44e54f){const _0xcfb892=_0x3193d6;try{if(navigator[_0xcfb892(0x23e)]&&navigator[_0xcfb892(0x23e)][_0xcfb892(0x1b3)])return await navigator[_0xcfb892(0x23e)]['writeText'](_0x44e54f),!![];else{const _0x24c8fb=document['createElement'](_0xcfb892(0x19c));_0x24c8fb[_0xcfb892(0x1d6)]=_0x44e54f,_0x24c8fb[_0xcfb892(0x243)][_0xcfb892(0x170)]=_0xcfb892(0x246),_0x24c8fb[_0xcfb892(0x243)]['left']='-999999px',_0x24c8fb[_0xcfb892(0x243)][_0xcfb892(0x1c1)]=_0xcfb892(0x20f),document['body']['appendChild'](_0x24c8fb),_0x24c8fb['focus'](),_0x24c8fb[_0xcfb892(0x254)]();const _0x5d4d94=document[_0xcfb892(0x241)](_0xcfb892(0x1f8));return document[_0xcfb892(0x1f7)][_0xcfb892(0x24b)](_0x24c8fb),_0x5d4d94;}}catch(_0x4ad33b){return console[_0xcfb892(0x198)]('Failed\x20to\x20copy\x20text:\x20',_0x4ad33b),![];}}function showToast(_0x5de911,_0x45d09c=_0x3193d6(0x190),_0x47576d=0xbb8){const _0x25f7fa=_0x3193d6;let _0x1a6926=document[_0x25f7fa(0x183)]('toast-container');!_0x1a6926&&(_0x1a6926=document[_0x25f7fa(0x1ae)](_0x25f7fa(0x16d)),_0x1a6926['id']=_0x25f7fa(0x25e),_0x1a6926['style']['position']='fixed',_0x1a6926[_0x25f7fa(0x243)]['bottom']=_0x25f7fa(0x1e2),_0x1a6926['style'][_0x25f7fa(0x234)]=_0x25f7fa(0x1e2),_0x1a6926[_0x25f7fa(0x243)][_0x25f7fa(0x1aa)]=_0x25f7fa(0x232),document['body'][_0x25f7fa(0x1b5)](_0x1a6926));const _0x5bdc94=document['createElement'](_0x25f7fa(0x16d));_0x5bdc94[_0x25f7fa(0x229)]=_0x25f7fa(0x219)+_0x45d09c,_0x5bdc94[_0x25f7fa(0x243)][_0x25f7fa(0x1b1)]=_0x25f7fa(0x19a),_0x5bdc94[_0x25f7fa(0x243)]['margin']='10px\x200',_0x5bdc94[_0x25f7fa(0x243)][_0x25f7fa(0x168)]='15px',_0x5bdc94[_0x25f7fa(0x243)]['borderRadius']=_0x25f7fa(0x1b8),_0x5bdc94['style'][_0x25f7fa(0x1bd)]=_0x25f7fa(0x1ad),_0x5bdc94[_0x25f7fa(0x243)][_0x25f7fa(0x263)]='flex',_0x5bdc94[_0x25f7fa(0x243)]['alignItems']=_0x25f7fa(0x195),_0x5bdc94[_0x25f7fa(0x243)]['justifyContent']='space-between',_0x5bdc94[_0x25f7fa(0x243)][_0x25f7fa(0x1d7)]=_0x25f7fa(0x1a9)+(_0x47576d/0x3e8-0.3)+_0x25f7fa(0x24f);switch(_0x45d09c){case'success':_0x5bdc94[_0x25f7fa(0x243)][_0x25f7fa(0x17b)]='rgba(16,\x20185,\x20129,\x200.9)';break;case'error':_0x5bdc94[_0x25f7fa(0x243)]['backgroundColor']='rgba(239,\x2068,\x2068,\x200.9)';break;default:_0x5bdc94[_0x25f7fa(0x243)]['backgroundColor']=_0x25f7fa(0x22c);}let _0x25bdfa='';switch(_0x45d09c){case'success':_0x25bdfa=_0x25f7fa(0x213);break;case _0x25f7fa(0x198):_0x25bdfa=_0x25f7fa(0x17f);break;default:_0x25bdfa=_0x25f7fa(0x1c3);}_0x5bdc94[_0x25f7fa(0x1c7)]=_0x25f7fa(0x245)+_0x25bdfa+_0x25f7fa(0x1c2)+_0x5de911+_0x25f7fa(0x193);const _0x480c58=_0x5bdc94[_0x25f7fa(0x1e0)]('button');_0x480c58[_0x25f7fa(0x22b)](_0x25f7fa(0x21d),()=>{const _0x181915=_0x25f7fa;_0x1a6926[_0x181915(0x24b)](_0x5bdc94);}),_0x1a6926[_0x25f7fa(0x1b5)](_0x5bdc94);if(!document[_0x25f7fa(0x183)](_0x25f7fa(0x1e4))){const _0x1c5f46=document[_0x25f7fa(0x1ae)](_0x25f7fa(0x243));_0x1c5f46['id']=_0x25f7fa(0x1e4),_0x1c5f46[_0x25f7fa(0x16e)]='\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20@keyframes\x20fadeIn\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20from\x20{\x20opacity:\x200;\x20transform:\x20translateY(20px);\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20to\x20{\x20opacity:\x201;\x20transform:\x20translateY(0);\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20@keyframes\x20fadeOut\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20from\x20{\x20opacity:\x201;\x20transform:\x20translateY(0);\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20to\x20{\x20opacity:\x200;\x20transform:\x20translateY(-20px);\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20',document[_0x25f7fa(0x17e)][_0x25f7fa(0x1b5)](_0x1c5f46);}setTimeout(()=>{const _0x5e1652=_0x25f7fa;_0x1a6926[_0x5e1652(0x18c)](_0x5bdc94)&&_0x1a6926[_0x5e1652(0x24b)](_0x5bdc94);},_0x47576d);}function generateUUID(_0x533a92){const _0x3431e0=_0x3193d6;document['getElementById'](_0x533a92)[_0x3431e0(0x1d6)]=generateUUIDv4();}function generatePassword(_0x282824){const _0x219d41=_0x3193d6;document[_0x219d41(0x183)](_0x282824)[_0x219d41(0x1d6)]=generateUUIDv4();}
+    </script>
+</body>
+</html>
